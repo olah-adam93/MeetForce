@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+:root {
+  --primary-background-color: #F3F4F5;
+  --secondary-background-color: #ffffff;
+  --tertiary-background-color: #af4448;
+  --fourthly-background-color: #fbf7ed;
+
+  --svg-illustration-color: #44AFAB;
+
+  --primary-background-image: linear-gradient(to bottom, #f3f4f5, #f2f2f3, #f1f1f2, #efeff0, #eeeeee, #ebebeb, #e7e7e7, #e4e4e4, #dedede, #d8d8d8, #d3d2d2, #cdcccc);
+
+  --primary-navbar-text-color: #870000;
+  --secondary-navbar-text-color: #ffffff;
+  --navbar-hover-color: #af4448;
+
+  --primary-footer-text-color: #dfe0e0;
+  --secondary-footer-text-color: #000000;
+  --footer-hover-color: #FFFFFF;
+
+  --primary-text-color: #000000;
+  --secondary-text-color: #FFFFFF;
+  --tertiary-text-color: #75807E;
+  --fourthly-text-color: #af4448;
+
+  --primary-box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%);
+  --hover-box-shadow: 0 4px 10px 4px rgb(0 0 0 / 15%);
+
+  --button-text-color: #ffffff;
+  --button-background-color: #af4448;
+  --button-hover-background-color: #870000;
+  --button-border-radius: 0.5rem;
+  --button-padding: 0.8rem 1.8rem;
+
+  --card-border-radius: 1rem;
+
+  --h1-font-size: 3rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 2rem;
+  --h4-font-size: 1.8rem;
+
+  --p-font-size-small: 1.4rem;
+  --p-font-size: 1.6rem;
+
+  --form-label-font-size: 1.6rem;
+  --form-input-padding: 1.2rem;
+  --form-input-border-radius: 0.5rem;
+  --form-input-border-color: #000;
+  --form-input-border-secondary-color: #75807E;
+  --form-hover-input-border-color: #af4448;
+
+  --link-basic-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.layout-container {
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: var(--primary-background-image);
+  /* background-color: var(--primary-background-color); */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.layout-inner-container {
+  min-width: 1080px;
+  width: 80%;
+  max-width: 1400px;
+  /*Description: min-height: calc(100vh - header height: 10rem & footer height: 5rem*/
+  min-height: calc(100vh - 15rem);
+  /* fix header height */
+  margin-top: 12rem;
 }

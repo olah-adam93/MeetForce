@@ -1,0 +1,6 @@
+.signup-view-container {
+  width: 100%;
+  min-height: fit-content;
+  display: flex;
+  justify-content: center;
+}

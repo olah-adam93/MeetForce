@@ -1,0 +1,28 @@
+.join-success-container {
+  text-align: center;
+}
+
+.join-success-container h2{
+  font-size: var(--h2-font-size);
+  margin: 0 2rem 1rem 2rem;
+}
+
+.join-success-container button{
+  font-size: var(--p-font-size);
+  margin: 2rem;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  transition: all .2s ease-out;
+}
+
+.join-success-container button:hover {
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
+}
+
+.join-success-container img{
+  width: 50%;
+}

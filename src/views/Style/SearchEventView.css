@@ -1,0 +1,24 @@
+.search-event-container {
+  width: 100%;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.search-event-inner-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.display-maps-container {
+  width: 90%;
+  max-width: 1000px;
+  height: 30rem;
+}
+
+

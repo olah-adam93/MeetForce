@@ -1,0 +1,39 @@
+.flex {
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    background-color: var(--secondary-background-color);
+    box-shadow: var(--primary-box-shadow);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.picture {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.pictures-details {
+    flex-direction: row;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    justify-content: space-between;
+    font-family: var(--fa-font-regular);
+    font-size: 1.2rem;
+    margin-top: 50px;
+    
+}
+
+.text {
+    color: var(--tertiary-background-color);
+    font-size: 1.6rem;
+}
+
+.text .title {
+font-size: 2rem;
+margin: 0.5rem 0;
+}
+

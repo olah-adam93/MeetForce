@@ -1,0 +1,30 @@
+Topic:
+
+    //VS Code Auto Save
+    
+    //Prettier formázáshoz (én használom, ha egységere felsetupoljuk mindenkinél, akkor nem lesz az, 
+    //hogy valahol nincs vessző valahol meg van, illetve ' ' vagy " ", meg indentation 4 space vagy 2)
+    -----> 2 bracket
+    -----> single quote
+    -----> default formatter beállítása
+    -----> format on save
+    -----> print-width : 90
+
+
+    //meyer féle css reset a teljes appra, és akkor elvileg böngészők között is egységes lesz a formázás --- ezt most nem érdekes
+    
+    //css fájlok a mappaszerkezeten belül (ahogy beszéltük talán érdemes lenne minden komponensnek külön css fájl,
+    //hogy véletlenül se keverjük össze a sok kódot az App.css-ben, App.css-be mennének a globális dolgok, css variables,
+    // meg a layout formázása)
+    -----> css fájl benne a componensének a megfelelő mappájában
+    ----->css fájl név kisbetűsen a komponens neve
+
+    className elnevezések (legyenek specifikusak és utaljanak a komponensek nevére, ha még külön css fájlba is tesszük 
+    a komponenseket, akkor is ütközhetnek) ---> .event-card-container .event-pciture{}
+    Kötőjel!
+    
+    //mappaszerkezet
+    -----> most megcsináljuk
+
+    
+

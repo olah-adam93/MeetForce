@@ -1,0 +1,136 @@
+.display-items-container {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.display-container {
+  margin: 2rem 0;
+  max-width: 100%;
+  width: 100%;
+  /* min-height: 800px; */
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
+  grid-template-columns: repeat(2, 50%); */
+}
+
+.display-container-message {
+  width: 100%;
+  text-align: center;
+}
+
+.display-container-message-text {
+  width: 100%;
+  font-size: var(--h3-font-size);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--form-input-border-secondary-color);
+}
+
+/* EventCard Container! */
+.display-items {
+  height: 19rem;
+}
+
+.display-items:last-child {
+  border-bottom: 1px solid var(--form-input-border-secondary-color);
+}
+
+/* Modal */
+.display-modal-container {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.display-modal-content {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  z-index: 1000;
+  border-radius: 1rem;
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+
+.display-modal-content button {
+  border: none;
+  font-size: 1.6rem;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.display-modal-content button:hover{
+  background-color: var(--button-hover-background-color);
+}
+
+.display-modal-content button:nth-child(1) {
+  margin-right: 2rem;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+}
+
+.pagination-container span {
+  font-size: 1.6rem;
+  margin: 0 1rem;
+}
+
+.pagination-container button {
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--secondary-background-color);
+  box-shadow: var(--primary-box-shadow);
+  border: none;
+  color: var(--primary-text-color);
+  transition: all .2s ease-out;
+  margin: 0 .5rem;
+}
+
+.pagination-container button:disabled {
+  color: var(--tertiary-text-color);
+  cursor: initial;
+}
+
+.pagination-container button:hover:enabled {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+}

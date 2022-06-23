@@ -1,0 +1,37 @@
+{
+  "user_details" :
+   {
+      "FIflvEW0btQxr1WIrNaI6s0ESVx2": {
+        "location" : "Debrecen",
+        "organization" : false
+      },
+      "1pZsXib1gHSv8iLV7E5V2ZOAzmy1" : {
+        "location" : "Budapest",
+        "organization" : false
+      }
+  },
+  "events": {
+    "-N434awefIJFAOJFAWDAF": {
+      "uid": "1pZsXib1gHSv8iLV7E5V2ZOAzmy1",
+      "status" : "public",
+      "title" : "Esemeny elnevezese",
+      "description" : "lorem ipsum",
+      "category_id" : 1,
+      "image_url" : "link a store-en tarolt kepre",
+      "event_type" : "online",
+      "location" : "Debrecen",
+      "date_from" : "5/11/2022, 6:06:11 PM",
+      "date_to": "1652285070",
+      "user_limit": 30,
+      "free": true,
+      "price": 19.98,
+      "currency": "USD"
+    }
+  },
+  "event_attendees": {
+    "-N434awefIJFAOJFAWDAF": {
+      "1pZsXib1gHSv8iLV7E5V2ZOAzmy1" : "Reg. kor megadott nev",
+      "FIflvEW0btQxr1WIrNaI6s0ESVx2" : "Masik nev"
+    }
+  }
+}

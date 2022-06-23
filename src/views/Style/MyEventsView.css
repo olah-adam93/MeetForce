@@ -1,0 +1,37 @@
+.my-events-container {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+}
+
+.my-events-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: var(--h1-font-size);
+}
+
+.my-events-sidebar {
+  width: 30%;
+}
+
+.my-events-content {
+  width: 70%;
+}
+
+.my-event-pic{
+  margin-top: 10rem;
+  width: 100%;
+}
+
+.my-events-message-container {
+  width: 100%;
+  text-align: center;
+}
+
+.my-events-message {
+  width: 100%;
+  font-size: var(--h3-font-size);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--form-input-border-secondary-color);
+}

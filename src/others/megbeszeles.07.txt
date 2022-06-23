@@ -1,0 +1,26 @@
+
+
+Topic:
+
+    UserNavbar: - event create, és searchnél nincs ott
+                -my events, profile, -nál ott van 
+    Profile: avatar, a usernavbar, eventcardok, nee, email, stb adatok megjelenítése
+    Settings: (nev, nem, szül. év...,) kép, email, loction, password?
+
+
+    main oldal css -- Szabolcs
+    header, footer, -- Oláh. Ádám
+    belső navbar css -- Eszter
+    profile css --- Eszter
+    login/sign up  -- css -- Ákos
+    4 statikus oldalt -- Raven
+    event -- Event paget -- css -- Raven
+
+    My events: Gergő
+    Create Event: Eszter
+    Settings: Oláh Á.
+    Serch event: Szabolcs
+
+
+    logo - még később 
+  

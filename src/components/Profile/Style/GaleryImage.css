@@ -1,0 +1,22 @@
+.galery-image {
+  background-color: white;
+  display: flex;
+  width: 30rem;
+  height: 25rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.galery-image p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.galery-image img {
+  max-width: 100%;
+  border: 1px solid black;
+  object-fit: contain;
+}
+.galery-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0.4rem 0.4rem 2rem #ccb9bc;
+}

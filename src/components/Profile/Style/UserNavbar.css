@@ -1,0 +1,24 @@
+.user-navbar {
+  margin: 1rem 2rem;
+}
+.user-navbar li {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.user-navbar li a:link,
+.user-navbar li a:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+.user-navbar li a:hover {
+  transform: translateY(-0.3rem);
+  text-shadow: .2rem .2rem .8rem #49599b;
+}
+.user-navbar li a:active {
+  transform: translateY(-0.1rem);
+}

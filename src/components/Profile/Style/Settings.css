@@ -1,0 +1,271 @@
+.settings-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.settings-form-container h1 {
+  font-size: var(--h1-font-size);
+  /* letter-spacing: 0.3rem; */
+}
+
+.section-header {
+  letter-spacing: 0.2rem;
+  font-size: var(--h2-font-size);
+  margin: 8rem auto 4rem auto;
+  text-decoration: underline var(--tertiary-background-color) 2px;
+}
+
+/* Form */
+
+.settings-form-container .settings-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+  width: 85%;
+  margin: 1.5rem auto;
+}
+
+.settings-name,
+.settings-email,
+.settings-image,
+.settings-location,
+.settings-date,
+.settings-telephoneNumber,
+.settings-gender,
+.settings-classification {
+  padding: 1rem;
+  min-height: 8rem;
+  width: 400px;
+  margin: auto;
+  display: flex;
+}
+
+.settings-name .label-form,
+.settings-email .label-form,
+.settings-location .label-form,
+.settings-date .label-form,
+.settings-telephoneNumber .label-form,
+.settings-gender .label-form,
+.settings-introduction .label-form {
+  font-size: var(--form-label-font-size);
+  margin-left: 0;
+  max-width: 12rem;
+  margin-top: 2rem;
+}
+
+.settings-introduction .label-form {
+  font-size: var(--form-label-font-size);
+  margin-top: 6rem;
+}
+
+.settings-location input,
+.settings-telephoneNumber input {
+  margin: 1rem 0 0 1rem;
+  width: 24.5rem;
+  border-radius: var(--form-input-border-radius);
+  border-color: var(--form-input-border-color);
+  border: 1px solid;
+  padding: var(--form-input-padding);
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+.settings-name .input-name {
+  margin-left: 5.9rem;
+  width: 24.5rem;
+  border-radius: var(--form-input-border-radius);
+  border-color: var(--form-input-border-color);
+  border: 1px solid;
+  padding: var(--form-input-padding);
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+.settings-email .input-email {
+  margin-left: 9.4rem;
+  width: 24.5rem;
+  border-radius: var(--form-input-border-radius);
+  border-color: var(--form-input-border-color);
+  border: 1px solid;
+  padding: var(--form-input-padding);
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+.settings-date .input-date {
+  margin-left: 6.8rem;
+  width: 24.5rem;
+  border-radius: var(--form-input-border-radius);
+  border-color: var(--form-input-border-color);
+  border: 1px solid;
+  padding: var(--form-input-padding);
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+.settings-location .input-location {
+  margin-left: 6.8rem;
+  width: 24.5rem;
+  border-radius: var(--form-input-border-radius);
+  border-color: var(--form-input-border-color);
+  border: 1px solid;
+  padding: var(--form-input-padding);
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+.settings-gender .select-gender {
+  margin: 1rem 0 0 7.3rem;
+  width: 24.5rem;
+  border-radius: var(--form-input-border-radius);
+  border-color: var(--form-input-border-color);
+  border: 1px solid;
+  padding: var(--form-input-padding);
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+.settings-introduction {
+  padding: 1rem 0 2rem 0;
+  min-height: 6.5rem;
+  margin: auto;
+  width: 400px;
+  display: flex;
+}
+
+.settings-introduction .textarea-introduction {
+  margin-left: 4.6rem;
+  width: 24.5rem;
+  height: 15rem;
+  border-radius: var(--form-input-border-radius);
+  border-color: var(--form-input-border-color);
+  border: 1px solid;
+  padding: var(--form-input-padding);
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+.settings-name input::placeholder,
+.settings-email input::placeholder,
+.settings-location .input-location::placeholder,
+.settings-introduction .textarea-introduction::placeholder,
+.settings-telephoneNumber input::placeholder {
+  font-size: var(--form-label-font-size);
+  color: var(--primary-text-color);
+}
+
+/* Profile picture */
+
+.settings-image-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.settings-image {
+  height: 100%;
+  width: 100%;
+  margin: 1rem;
+  border-radius: var(--card-border-radius);
+  background-color: var(--secondary-navbar-text-color);
+  box-shadow: var(--primary-box-shadow);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatar-img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.settings-image img {
+  width: 80%;
+  height: auto;
+}
+
+.settings-image .settings-icon {
+  font-size: var(--p-font-size);
+  color: var(--tertiary-background-color);
+  padding-bottom: 0.5rem;
+}
+
+.settings-image button {
+  padding: var(--button-padding);
+  font-size: var(--p-font-size);
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: var(--tertiary-background-color);
+  color: var(--secondary-navbar-text-color);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  margin: 3rem auto 1rem auto;
+}
+
+.settings-image button:hover,
+.settings-form .save-button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+.settings-location .input-location:hover,
+.settings-date .input-date:hover,
+.settings-telephoneNumber input:hover,
+.settings-name .input-name:hover,
+.settings-email .input-email:hover,
+.settings-gender .select-gender:hover,
+.settings-introduction .textarea-introduction:hover {
+  border: 1px solid var(--form-hover-input-border-color);
+}
+
+/* Classification radio */
+
+.settings-form .settings-classification {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 18rem;
+  margin: auto;
+}
+
+.classification-personal,
+.classification-organization {
+  margin: auto;
+  color: var(--primary-text-color);
+  padding: 0.3rem 0.8rem;
+  font-size: var(--p-font-size);
+  font-weight: 500;
+}
+
+.edit-msg {
+  margin: auto auto auto 45%;
+  height: 1.5rem;
+  font-size: var(--p-font-size-small);
+  color: var(--fourthly-text-color);
+}
+
+/* Save button */
+
+.settings-form .save-button {
+  padding: var(--button-padding);
+  font-size: var(--p-font-size);
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: var(--tertiary-background-color);
+  color: var(--secondary-navbar-text-color);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  margin: 3rem auto 1rem auto;
+}

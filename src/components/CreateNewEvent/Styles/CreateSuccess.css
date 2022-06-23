@@ -1,0 +1,27 @@
+.create-success-container {
+  text-align: center;
+}
+.create-success-container h2{
+  font-size: var(--h2-font-size);
+}
+.create-success-container button{
+  font-size: var(--p-font-size);
+}
+.create-success-container img{
+  width: 50%;
+  
+}
+.create-success-container button{
+  
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  margin: 2rem;
+  transition: all .2s ease-out;
+}
+.create-success-container button:hover{
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
+}

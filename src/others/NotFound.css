@@ -1,0 +1,37 @@
+.notfound-container {
+  width: 100%;
+  display: flex;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+
+.notfound-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.notfound-message {
+  font-size: 4rem;
+}
+
+.notfound-image {
+  width: 65%;
+}
+
+.notfound-button {
+  margin-top: 3rem;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-background-color);
+  font-size: 1.6rem;
+  border: none;
+  color: var(--button-text-color);
+  transition: all .2s ease-out;
+}
+
+.notfound-button:hover {
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
+}

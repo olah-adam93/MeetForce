@@ -1,0 +1,241 @@
+.sign-up-container {
+  width: 35rem;
+  height: 72rem;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  text-align: left;
+  display: flex;
+  box-shadow: var(--primary-box-shadow);
+}
+
+.sign-up-container .header-logo-img {
+  margin-bottom: 2.5rem;
+}
+
+.sign-up-container .sign-up-header {
+  font-size: var(--h3-font-size);
+  margin: 0 auto 2rem 0;
+}
+
+.sign-up-container form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+form .name-container,
+form .mail-container,
+form .password-container,
+form .location-signup-container,
+form .classification-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+form .name-container .name-label,
+form .mail-container .mail-label,
+form .password-container .password-label,
+form .location-signup-container .location-label,
+form .classification-container .classification-label {
+  font-size: var(--form-label-font-size);
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.classification-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 18rem;
+  margin: 2rem auto;
+}
+
+.classification-field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  color: var(--primary-text-color);
+  padding: 0.3rem 0.8rem;
+  font-size: var(--p-font-size);
+}
+
+.classification-field input {
+  width: 5rem;
+  height: 5rem;
+  padding: var(--form-label-padding);
+  border: 1px solid;
+  border-color: var(--form-input-border-color);
+  border-radius: var(--form-input-border-radius);
+  font-size: var(--p-font-size-small);
+  background: none;
+  outline: none;
+}
+
+form .name-container.shake input,
+form .mail-container.shake input,
+form .password-container.shake input,
+form .location-signup-container.shake input {
+  animation: shake 0.9s ease-in-out;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(0.5rem);
+    box-shadow: var(--hover-box-shadow);
+  }
+  10%,
+  30%,
+  50% {
+    transform: translate(-0.2rem);
+  }
+  70%,
+  100% {
+    transform: translate(0);
+  }
+}
+
+form .name-container .name-field,
+form .mail-container .mail-field,
+form .password-container .password-field,
+form .location-signup-container .location-field {
+  height: 3.5rem;
+  width: 100%;
+  position: relative;
+}
+
+form .classification-container .classification-field {
+  height: 5rem;
+  width: 100%;
+  position: relative;
+}
+
+form .name-container input,
+form .mail-container input,
+form .password-container input,
+form .location-signup-container input {
+  height: 4rem;
+  width: 32rem;
+  font-size: var(--p-font-size);
+  border: 1px solid;
+  border-color: var(--form-input-border-color);
+  border-radius: var(--form-input-border-radius);
+  padding: var(--form-input-padding);
+  background: none;
+  outline: none;
+}
+
+form .name-container input:focus,
+form .name-container.valid input,
+form .name-container.shake input {
+  border-color: var(--form-hover-input-border-color);
+}
+
+form .mail-container input:focus,
+form .mail-container.valid input,
+form .mail-container.shake input {
+  border-color: var(--form-hover-input-border-color);
+}
+
+form .password-container input:focus,
+form .password-container.valid input,
+form .password-container.shake input {
+  border-color: var(--form-hover-input-border-color);
+}
+
+form .location-container input:focus,
+form .location-container.valid input,
+form .location-signup-container.shake input {
+  border-color: var(--form-hover-input-border-color);
+}
+
+.name-container .name-field .icon-person,
+.name-container .name-field .icon-error,
+.mail-container .mail-field .icon-envelope,
+.mail-container .mail-field .icon-error,
+.password-container .password-field .icon-lock,
+.password-container .password-field .icon-error,
+.location-signup-container .location-field .icon-location,
+.location-signup-container .location-field .icon-error {
+  position: absolute;
+  top: 50%;
+  font-size: var(--p-font-size);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.name-container .name-field .icon-person,
+.mail-container .mail-field .icon-envelope,
+.password-container .password-field .icon-lock,
+.location-signup-container .location-field .icon-location {
+  left: 5px;
+  top: 20px;
+  color: rgba(175, 68, 72, 0.1);
+}
+
+.name-container .name-field .icon-error,
+.mail-container .mail-field .icon-error,
+.password-container .password-field .icon-error,
+.location-signup-container .location-field .icon-error {
+  right: 5px;
+  top: 20px;
+  color: var(--button-hover-background-color);
+}
+
+form .name-container .error-msg,
+form .mail-container .error-msg,
+form .password-container .error-msg,
+form .location-signup-container .error-msg {
+  margin-top: 1rem;
+  height: 1.5rem;
+  color: var(--button-hover-background-color);
+  text-align: left;
+}
+
+.classification-msg {
+  margin: -2rem auto;
+  height: 1.5rem;
+  display: block;
+  color: var(--button-hover-background-color);
+}
+
+.log-success-msg {
+  margin: 0.5rem auto 0.8rem 0;
+  color: var(--primary-text-color);
+  font-size: var(--p-font-size-small);
+}
+
+.sign-up-container button {
+  padding: var(--button-padding);
+  font-size: var(--p-font-size);
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: var(--tertiary-background-color);
+  color: var(--secondary-navbar-text-color);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  margin: 4rem auto;
+  transition: all 0.3s ease;
+}
+
+form .name-container input:hover,
+form .mail-container input:hover,
+form .password-container input:hover,
+form .location-signup-container input:hover,
+form .classification-container input:hover {
+  border: 1px solid var(--form-hover-input-border-color);
+}
+
+.sign-up-container button:hover {
+  background-color: var(--button-hover-background-color);
+}
