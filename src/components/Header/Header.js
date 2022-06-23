@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 /* Components */
 import NavBarMain from './NavBarMain';
@@ -9,7 +9,6 @@ import './Header.css';
 
 const Header = () => {
   const [small, setSmall] = useState(false);
-  
 
   useEffect(() => {
     const scrollCallback = () =>
@@ -24,8 +23,11 @@ const Header = () => {
     <div className={`header-container ${small ? 'header-small' : ''}`}>
       <div className='header-inner-container'>
         <div className='header-logo'>
-          <NavLink className={`header-logo-navlink ${small ? 'header-logo-navlink-small' : ''}`} to='/'>
-            <p>MeetAtSix</p>
+          <NavLink
+            className={`header-logo-navlink ${small ? 'header-logo-navlink-small' : ''}`}
+            to='/'
+          >
+            <p>Meetforce</p>
             {/* <img
               className={`header-logo-img ${small ? 'img-small' : ''}`}
               src={require('../../others/logo/meetatsix100.406.szines2.png')}

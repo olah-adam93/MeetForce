@@ -137,25 +137,25 @@ form .location-signup-container input {
 form .name-container input:focus,
 form .name-container.valid input,
 form .name-container.shake input {
-  border-color: var(--form-hover-input-border-color);
+  border-color: rgb(135, 0, 0);
 }
 
 form .mail-container input:focus,
 form .mail-container.valid input,
 form .mail-container.shake input {
-  border-color: var(--form-hover-input-border-color);
+  border-color: rgb(135, 0, 0);
 }
 
 form .password-container input:focus,
 form .password-container.valid input,
 form .password-container.shake input {
-  border-color: var(--form-hover-input-border-color);
+  border-color: rgb(135, 0, 0);
 }
 
 form .location-container input:focus,
 form .location-container.valid input,
 form .location-signup-container.shake input {
-  border-color: var(--form-hover-input-border-color);
+  border-color: rgb(135, 0, 0);
 }
 
 .name-container .name-field .icon-person,
@@ -188,7 +188,7 @@ form .location-signup-container.shake input {
 .location-signup-container .location-field .icon-error {
   right: 5px;
   top: 20px;
-  color: var(--button-hover-background-color);
+  color: rgb(135, 0, 0);
 }
 
 form .name-container .error-msg,
@@ -197,7 +197,7 @@ form .password-container .error-msg,
 form .location-signup-container .error-msg {
   margin-top: 1rem;
   height: 1.5rem;
-  color: var(--button-hover-background-color);
+  color: rgb(135, 0, 0);
   text-align: left;
 }
 
@@ -205,7 +205,7 @@ form .location-signup-container .error-msg {
   margin: -2rem auto;
   height: 1.5rem;
   display: block;
-  color: var(--button-hover-background-color);
+  color: rgb(135, 0, 0);
 }
 
 .log-success-msg {

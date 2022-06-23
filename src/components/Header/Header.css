@@ -10,7 +10,7 @@
 }
 
 .header-small {
-  background-color: rgba(243, 244, 245, .8);
+  background-color: rgba(243, 244, 245, 0.8);
   backdrop-filter: blur(10px);
   height: 5rem;
   box-shadow: var(--primary-box-shadow);
@@ -39,10 +39,15 @@
   font-size: 3.5rem;
   font-family: 'Kanit', sans-serif;
   font-weight: bold;
-  background: linear-gradient(90deg, rgba(175,68,72,1) 23%, rgba(158,39,41,1) 54%, rgba(94,0,0,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(7, 67, 159) 23%,
+    rgb(5, 55, 129) 54%,
+    rgb(3, 29, 68) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .header-logo-navlink-small {
@@ -105,7 +110,7 @@
   justify-content: center;
   visibility: hidden;
   opacity: 0;
-  transition: visibility .2s, opacity 0.2s ease-in-out;
+  transition: visibility 0.2s, opacity 0.2s ease-in-out;
   position: absolute;
   transform: translateY(1rem);
   background-color: none;
@@ -123,7 +128,7 @@
   margin-top: 1rem;
   border-radius: var(--card-border-radius);
   background-color: var(--primary-background-color);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 2rem 0rem;
   height: fit-content;
   text-align: center;

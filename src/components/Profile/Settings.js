@@ -253,7 +253,7 @@ const Settings = ({ setData, data }) => {
             className='input-telephone'
             onChange={changeHandler}
             placeholder={userDetailsObj?.telephone || '+00-00-000-0000'}
-            pattern='[0-9]{2}[0-9]{2}[0-9]{3}[0-9]{4}'
+            pattern='+([0-9]||[0-9]{2}||[0-9]{3})[0-9]{2}[0-9]{2}[0-9]{3}[0-9]{4}'
           />
         </div>
         <div className='edit-msg'>{telChanged && 'Telephone number changed!'}</div>

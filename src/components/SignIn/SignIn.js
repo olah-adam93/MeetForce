@@ -91,7 +91,7 @@ const SignIn = ({ submitForm }) => {
           alt='logo'
         /> */}
         <div className='sign-in-header'>
-          <h3> Sign In </h3>
+          <h3> Log In </h3>
         </div>
         <div className={`mail-container${error.e_mail ? ' shake' : ''}`}>
           <label className='mail-label'>Email</label>
@@ -137,7 +137,7 @@ const SignIn = ({ submitForm }) => {
             <p className='error-msg'>{error?.authError}</p>
           )}
         </div>
-        <button className='submit'>Sign in</button>
+        <button className='submit'>Log in</button>
       </form>
     </div>
   );

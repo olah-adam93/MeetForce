@@ -1,34 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 :root {
-  --primary-background-color: #F3F4F5;
+  --primary-background-color: #f3f4f5;
   --secondary-background-color: #ffffff;
-  --tertiary-background-color: #af4448;
+  --tertiary-background-color: #07439f;
   --fourthly-background-color: #fbf7ed;
 
-  --svg-illustration-color: #44AFAB;
+  --svg-illustration-color: #44afab;
 
-  --primary-background-image: linear-gradient(to bottom, #f3f4f5, #f2f2f3, #f1f1f2, #efeff0, #eeeeee, #ebebeb, #e7e7e7, #e4e4e4, #dedede, #d8d8d8, #d3d2d2, #cdcccc);
+  --primary-background-image: linear-gradient(
+    to bottom,
+    #f3f4f5,
+    #f2f2f3,
+    #f1f1f2,
+    #efeff0,
+    #eeeeee,
+    #ebebeb,
+    #e7e7e7,
+    #e4e4e4,
+    #dedede,
+    #d8d8d8,
+    #d3d2d2,
+    #cdcccc
+  );
 
-  --primary-navbar-text-color: #870000;
+  --primary-navbar-text-color: #031d44;
   --secondary-navbar-text-color: #ffffff;
-  --navbar-hover-color: #af4448;
+  --navbar-hover-color: #07439f;
 
   --primary-footer-text-color: #dfe0e0;
   --secondary-footer-text-color: #000000;
-  --footer-hover-color: #FFFFFF;
+  --footer-hover-color: #ffffff;
 
   --primary-text-color: #000000;
-  --secondary-text-color: #FFFFFF;
-  --tertiary-text-color: #75807E;
-  --fourthly-text-color: #af4448;
+  --secondary-text-color: #ffffff;
+  --tertiary-text-color: #75807e;
+  --fourthly-text-color: #07439f;
 
   --primary-box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%);
   --hover-box-shadow: 0 4px 10px 4px rgb(0 0 0 / 15%);
 
   --button-text-color: #ffffff;
-  --button-background-color: #af4448;
-  --button-hover-background-color: #870000;
+  --button-background-color: #07439f;
+  --button-hover-background-color: #031d44;
   --button-border-radius: 0.5rem;
   --button-padding: 0.8rem 1.8rem;
 
@@ -46,8 +60,8 @@
   --form-input-padding: 1.2rem;
   --form-input-border-radius: 0.5rem;
   --form-input-border-color: #000;
-  --form-input-border-secondary-color: #75807E;
-  --form-hover-input-border-color: #af4448;
+  --form-input-border-secondary-color: #75807e;
+  --form-hover-input-border-color: #07439f;
 
   --link-basic-style: none;
 }
@@ -70,4 +84,5 @@
   min-height: calc(100vh - 15rem);
   /* fix header height */
   margin-top: 12rem;
+  margin-bottom: 3rem;
 }
