@@ -24,7 +24,7 @@ const Settings = ({ setData, data }) => {
     location: '',
     organization: '',
     telephone: '',
-    userIntroduction: '',
+    userIntroduction: `Hi, my name is ${userData.userLog.user.displayName} and i'm cool as fck..`,
   });
   const [authInputValue, setAuthInputValue] = useState({
     name: '',
@@ -110,13 +110,6 @@ const Settings = ({ setData, data }) => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-
-    /*  createUserData(`userDetails/${user.uid}`, {
-      birthday: inputValue?.birthday || userDetailsObj.birthday,
-      gender: inputValue?.gender || userDetailsObj.gender,
-      telephone: inputValue?.telephone || userDetailsObj.telephone,
-      userIntroduction: inputValue?.userIntroduction || userDetailsObj.userIntroduction,
-    }); */
 
     updateData('userDetails', user.uid, {
       birthday: inputValue?.birthday || userDetailsObj.birthday,
@@ -237,7 +230,7 @@ const Settings = ({ setData, data }) => {
             name='birthday'
             className='input-date'
             onChange={changeHandler}
-            //placeholder={userDetailsObj?.birthday}
+            placeholder={userDetailsObj?.birthday}
           />
         </div>
         <div className='edit-msg'>{birthChanged && 'Date of birth changed!'}</div>
@@ -247,13 +240,13 @@ const Settings = ({ setData, data }) => {
             Telephone number
           </label>
           <input
-            type='tel'
+            type='text'
             id='telephone'
             name='telephone'
             className='input-telephone'
             onChange={changeHandler}
-            placeholder={userDetailsObj?.telephone || '+00-00-000-0000'}
-            pattern='+([0-9]||[0-9]{2}||[0-9]{3})[0-9]{2}[0-9]{2}[0-9]{3}[0-9]{4}'
+            placeholder={userDetailsObj?.telephone || '000-000-0000'}
+            //pattern='^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
           />
         </div>
         <div className='edit-msg'>{telChanged && 'Telephone number changed!'}</div>
@@ -267,7 +260,6 @@ const Settings = ({ setData, data }) => {
             name='gender'
             id='gender'
             onChange={changeHandler}
-            value={userDetailsObj?.gender}
           >
             <option value='0'>Open this select menu</option>
             <option value='female'>Female</option>
@@ -285,7 +277,10 @@ const Settings = ({ setData, data }) => {
             id='userIntroduction'
             name='userIntroduction'
             className='textarea-introduction'
-            placeholder={userDetailsObj?.userIntroduction}
+            placeholder={
+              userDetailsObj?.userIntroduction ||
+              `Hi, my name is ${userData.userLog.user.displayName} and i'm cool as fck..`
+            }
             onChange={changeHandler}
           ></textarea>
         </div>
@@ -298,7 +293,7 @@ const Settings = ({ setData, data }) => {
               id='personal'
               value={false}
               onChange={changeHandler}
-              defaultChecked={userDetailsObj.organization === 'false'}
+              //defaultChecked={userDetailsObj.organization === 'false'}
             />
             <label className='form-radio-label' htmlFor='personal'>
               Personal
@@ -312,7 +307,7 @@ const Settings = ({ setData, data }) => {
               id='organization'
               value={true}
               onChange={changeHandler}
-              defaultChecked={userDetailsObj.organization === 'true'}
+              //defaultChecked={userDetailsObj.organization === 'true'}
             />
             <label className='form-radio-label' htmlFor='organization'>
               Organization

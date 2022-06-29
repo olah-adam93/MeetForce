@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react';
+import { useState, useEffect, useRef } from 'react';
 // import {Link} from 'react-router-dom';
 
 /* Style */
@@ -7,7 +7,7 @@ import './Styles/EventInfoMap.css';
 /* Image */
 import eventImagePlaceholder from '../../others/logo/logo7.3.png';
 
-const EventInfoMap = ({eventInfo}) => {
+const EventInfoMap = ({ eventInfo }) => {
   const [map, setMap] = useState();
   const [marker, setMarker] = useState();
   const [infoWindow, setInfoWindow] = useState();
@@ -26,7 +26,7 @@ const EventInfoMap = ({eventInfo}) => {
       map.setOptions({
         zoom: 8,
         // center: { lat: eventInfo[1]?.geoLat, lng: eventInfo[1]?.geoLng },
-        center: {lat: Number(eventInfo?.geoLat), lng: Number(eventInfo?.geoLng)},
+        center: { lat: Number(eventInfo?.geoLat), lng: Number(eventInfo?.geoLng) },
         // disableDefaultUI: true,
         mapTypeControl: false,
         streetViewControl: false,
@@ -34,7 +34,6 @@ const EventInfoMap = ({eventInfo}) => {
       });
     }
   }, [ref, map, eventInfo]);
-
 
   useEffect(() => {
     setInfoWindow(
@@ -59,18 +58,17 @@ const EventInfoMap = ({eventInfo}) => {
       })
     );
   }, [eventInfo]);
-  
 
   useEffect(() => {
     if (!marker && map) {
       // console.log('current event:', currentEvent);
 
       const myMarker = new window.google.maps.Marker({
-        position: {lat: Number(eventInfo?.geoLat), lng: Number(eventInfo?.geoLng)},
+        position: { lat: Number(eventInfo?.geoLat), lng: Number(eventInfo?.geoLng) },
         map,
         // optimized: true,
         animation: window.google.maps.Animation.DROP,
-      })
+      });
 
       setMarker(myMarker);
 
@@ -91,13 +89,7 @@ const EventInfoMap = ({eventInfo}) => {
     }
   }, [marker, map, eventInfo, infoWindow]);
 
-
-
-  return (
-    <>
-      <div className='goole-maps-event-container' ref={ref}></div>
-    </>
-  );
+  return <>{/*<div className='goole-maps-event-container' ref={ref}></div>*/}</>;
 };
 
 export default EventInfoMap;

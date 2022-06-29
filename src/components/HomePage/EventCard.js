@@ -1,8 +1,8 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
 /* Style */
 import './Styles/EventCard.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarXmark, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 /* Image */
 import eventImagePlaceholder from '../../others/logo/logo7.3.png';
@@ -11,7 +11,7 @@ import { AuthContext } from '../Authentication/AuthContext';
 
 /* CRUD */
 import { readData } from '../../services/crud';
-import {liveValue} from '../../services/crud';
+import { liveValue } from '../../services/crud';
 
 const EventCard = ({
   eventSearchStyle,
@@ -25,11 +25,11 @@ const EventCard = ({
 }) => {
   const [attendees, setAttendees] = useState([]);
   const authContext = useContext(AuthContext);
-  
+
   useEffect(() => {
-      readData('eventAttendees', eventId).then((snapshot) => {
-          setAttendees(Object.keys(snapshot.val() || {}));
-      });
+    readData('eventAttendees', eventId).then((snapshot) => {
+      setAttendees(Object.keys(snapshot.val() || {}));
+    });
   }, [eventId]);
 
   // useEffect(() => {
@@ -39,10 +39,16 @@ const EventCard = ({
   // }, [eventId]);
 
   return (
-    <div className={eventSearchStyle ? 'event-card-container-search' : 'event-card-container'}>
+    <div
+      className={
+        eventSearchStyle ? 'event-card-container-search' : 'event-card-container'
+      }
+    >
       <Link
         className={
-          eventSearchStyle ? 'event-card-inner-container-search' : 'event-card-inner-container'
+          eventSearchStyle
+            ? 'event-card-inner-container-search'
+            : 'event-card-inner-container'
         }
         to={`/eventpage/${eventId}`}
       >
@@ -70,7 +76,15 @@ const EventCard = ({
                   alt={eventCard?.title}
                 />
               ) : (
-                <p className={eventSearchStyle ? 'event-picture-default-logo-search' : 'event-picture-default-logo'}>MeetAtSix</p>
+                <p
+                  className={
+                    eventSearchStyle
+                      ? 'event-picture-default-logo-search'
+                      : 'event-picture-default-logo'
+                  }
+                >
+                  Meetforce
+                </p>
                 // <img
                 //   className={
                 //     eventSearchStyle
@@ -98,9 +112,11 @@ const EventCard = ({
                 eventSearchStyle ? 'event-data-title-search' : 'event-data-title'
               }
             >
-              {eventCard?.title.length > 45 ? eventCard?.title.slice(0, 45) + '...' : eventCard?.title}
+              {eventCard?.title.length > 45
+                ? eventCard?.title.slice(0, 45) + '...'
+                : eventCard?.title}
             </div>
-              
+
             <p
               className={
                 eventSearchStyle ? 'event-data-location-search' : 'event-data-location'
@@ -128,14 +144,14 @@ const EventCard = ({
         {isUnsubscribeButton && (
           <>
             <button type='button' onClick={unsubscribeModalHandler(eventObj)}>
-            <FontAwesomeIcon icon={faCalendarXmark} />
+              <FontAwesomeIcon icon={faCalendarXmark} />
             </button>
           </>
         )}
         {isDeleteButton && (
           <>
             <button type='button' onClick={deleteModalHandler(eventObj)}>
-            <FontAwesomeIcon icon={faTrashCan} />
+              <FontAwesomeIcon icon={faTrashCan} />
             </button>
           </>
         )}

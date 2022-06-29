@@ -58,7 +58,12 @@
   font-size: 6rem;
   font-family: 'Kanit', sans-serif;
   font-weight: bold;
-  background: linear-gradient(90deg, rgba(175,68,72,1) 23%, rgba(158,39,41,1) 54%, rgba(94,0,0,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(7, 67, 159) 23%,
+    rgb(5, 55, 129) 54%,
+    rgb(3, 29, 68) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -164,7 +169,7 @@
   font-size: 1.6rem;
   border: none;
   color: var(--button-text-color);
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   margin-left: 3rem;
 }
 

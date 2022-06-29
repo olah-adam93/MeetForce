@@ -6,7 +6,7 @@ import './Styles/EventImage.css';
 /* Image */
 import eventImagePlaceholder from '../../others/logo/logo7.3.png';
 
-const EventImage = ({eventInfo}) => {
+const EventImage = ({ eventInfo }) => {
   return (
     <>
       {eventInfo && (
@@ -18,7 +18,7 @@ const EventImage = ({eventInfo}) => {
               alt={eventInfo?.title}
             />
           ) : (
-            <p className='event-image-default'>MeetAtSix</p>
+            <p className='event-image-default'>Meetforce</p>
             // <img
             //   className='event-image-default'
             //   src={eventImagePlaceholder}

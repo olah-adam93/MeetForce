@@ -37,10 +37,6 @@ const SignUp = ({ submitForm }) => {
         ...data,
         [e.target.name]: e.target.value,
       });
-
-      /*if (data?.nam && data?.e_mail && data?.passw && data?.passw.length > 5) {
-        setCorrectData(true);
-      } */
       setError({});
       setCorrectData(false);
     },
@@ -50,9 +46,8 @@ const SignUp = ({ submitForm }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setError(validate(data));
+    const user = auth.currentUser;
 
-    //console.log(correctData);
-    // if (correctData) {
     createUserWithEmailAndPassword(auth, data.e_mail, data.passw)
       .then((authCredential) => {
         // Sikeres volt a regisztracio
@@ -75,6 +70,10 @@ const SignUp = ({ submitForm }) => {
           createUserData(`userDetails/${user.uid}`, {
             location: data.loc,
             organization: false,
+            birthday: '',
+            gender: '',
+            telephone: '',
+            userIntroduction: '',
           });
         }
       })
@@ -85,15 +84,8 @@ const SignUp = ({ submitForm }) => {
         navigateTo('/thankyou');
       })
       .catch((e) => console.log(e));
-    //}
     setCorrectData(true);
   };
-
-  // useEffect(() => {
-  //   if (Object.keys(error).length === 0 && correctData) {
-  //     submitForm(true);
-  //   }
-  // }, [error, correctData, submitForm]);
 
   // Validation
 
@@ -116,9 +108,9 @@ const SignUp = ({ submitForm }) => {
     } else if (data.passw.length > 10) {
       errors.passw = 'Password cannot be more than 10 characters!';
     }
-    if (!data.loc) {
+    /*if (!data.loc) {
       errors.loc = 'Location cannot be blank!';
-    }
+    }*/
     if (!data.organization) {
       errors.organization = 'Please choose from the given options!';
     }

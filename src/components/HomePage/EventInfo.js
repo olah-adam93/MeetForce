@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /* Components */
 import JoinModal from './JoinModal';
@@ -7,21 +7,22 @@ import StripePayment from './StripePayment';
 
 /* Firebase */
 // import { getAuth, getUser } from 'firebase/auth';
-import {auth} from '../../config/firebase';
+import { auth } from '../../config/firebase';
 
 /* CRUD */
-import {readData, updateData} from '../../services/crud';
+import { readData, updateData } from '../../services/crud';
 
 /* Fontawesome */
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faClock} from '@fortawesome/free-regular-svg-icons';
-import {faEarthEurope, faGlobe} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { faEarthEurope, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-const EventInfo = ({eventInfo, isOpen, setIsOpen, paymentSucces}) => {
+const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
   const [organizerData, setOrganizerData] = useState(false);
   const [eventKey, eventValue] = eventInfo;
   const user = auth.currentUser;
-  const [attendees, setAttendees] = useState([]);
+  const [attendeesNo, setAttendeesNo] = useState([]);
+  const [attendeesNm, setAttendeesNm] = useState([]);
   const navigateTo = useNavigate();
 
   // useEffect(() => {
@@ -32,7 +33,8 @@ const EventInfo = ({eventInfo, isOpen, setIsOpen, paymentSucces}) => {
 
   useEffect(() => {
     readData('eventAttendees', eventKey).then((snapshot) => {
-      setAttendees(Object.keys(snapshot.val() || {}));
+      setAttendeesNo(Object.keys(snapshot.val() || {}));
+      setAttendeesNm(Object.values(snapshot.val() || {}));
     });
   }, [eventKey]);
 
@@ -44,7 +46,7 @@ const EventInfo = ({eventInfo, isOpen, setIsOpen, paymentSucces}) => {
     }).then(() => {
       // setIsOpen(false);
     });
-    navigateTo("/join-success")
+    navigateTo('/join-success');
   };
 
   const clickOrganizer = (e) => {
@@ -98,27 +100,29 @@ const EventInfo = ({eventInfo, isOpen, setIsOpen, paymentSucces}) => {
       )} */}
 
       <div className='event-info-attendees'>
-        {/* Attendees: {attendees.length === 0 ? 0 : attendees.length} / {eventValue?.attendant} */}
-        Attendees: {attendees.length === 0 ? 0 : attendees.length}
+        {/*Attendees: {attendees.length === 0 ? 0 : attendees.length}*/}
+        {/*Attendees:{[attendeesNm]}*/}
       </div>
 
-      {user?.uid !== eventValue?.uid && <div className='event-info-price'>
-        {eventValue?.paymentType === 'free' ? (
-          <>{eventValue?.paymentType}</>
-        ) : (
-          <>{eventValue?.ticketPrice} huf</>
-        )}
-      </div>}
+      {user?.uid !== eventValue?.uid && (
+        <div className='event-info-price'>
+          {eventValue?.paymentType === 'free' ? (
+            <>{eventValue?.paymentType}</>
+          ) : (
+            <>{eventValue?.ticketPrice} huf</>
+          )}
+        </div>
+      )}
 
       {user ? (
         user?.uid === eventValue?.uid ? (
           <div className='event-info-alert'>You are the organizer of this event!</div>
-        ) : attendees.includes(user.uid) ? (
+        ) : attendeesNo.includes(user.uid) ? (
           <div className='event-info-alert'>Already joined!</div>
-        ) : attendees.length === Number(eventValue?.attendant) ? (
+        ) : attendeesNo.length === Number(eventValue?.attendant) ? (
           <div className='event-info-alert'>This event is full!</div>
         ) : eventValue?.paymentType === 'ticket' ? (
-          <StripePayment eventKey={eventKey} eventValue={eventValue}/>
+          <StripePayment eventKey={eventKey} eventValue={eventValue} />
         ) : (
           <button onClick={clickHandler} className='event-info-button'>
             {' '}
@@ -126,27 +130,10 @@ const EventInfo = ({eventInfo, isOpen, setIsOpen, paymentSucces}) => {
           </button>
         )
       ) : (
-        <button className='event-info-button' onClick={() => navigateTo('/signin')}>Sign in to subscribe</button>
+        <button className='event-info-button' onClick={() => navigateTo('/signin')}>
+          Sign in to subscribe
+        </button>
       )}
-
-      {/* {isOpen && (
-        <JoinModal
-          clickHandler={clickHandler}
-          setIsOpen={setIsOpen}
-          eventKey={eventKey}
-          eventValue={eventValue}
-        />
-        eventValue?.paymentType === 'ticket' ? (
-                    <StripePayment eventKey={eventKey} eventValue={eventValue} />
-                  ) : (
-                    <button
-                      className='joinmodal-join-button'
-                      type='button'
-                      onClick={joinHandler}
-                    >
-                      Join
-                    </button>
-      )} */}
     </div>
   );
 };

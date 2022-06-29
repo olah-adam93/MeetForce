@@ -13,24 +13,24 @@ const AboutView = () => {
         <img className='about-image-left-two' src={about2}></img>
       </div>
       <div className='about-text-container'>
-        <h1 className='about-title'>Who are we?</h1>
+        <h1 className='about-title'>Who am i?</h1>
         <div className='about-body'>
           <p>
-            Once upon a time, there were six young people on the planet Earth. One day,
-            these six, different person decided to sign up to the course of the Progmatic
-            School.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex ante, suscipit
+            vitae lorem in, faucibus mollis lorem. Aliquam tellus dolor, gravida sed lacus
+            eget, egestas condimentum justo. Duis et commodo ex. Aliquam at leo in massa
+            venenatis rutrum quis vitae quam. Nulla facilisi.
           </p>
           <p>
-            After a long period, they learnt the basics of the frontend programming, met a
-            the way of the coding or something more. At the end of the course, they had to
-            create their frist project, as some kind of final exam. Their goal was to create
-            an online page, were people could browse between events, in various theme.
+            Phasellus turpis tortor, condimentum tristique velit vel, vestibulum porta
+            nunc. Mauris posuere ex sit amet sapien malesuada volutpat. Duis vulputate
+            risus et maximus mollis. Nunc molestie orci lorem, eget lobortis felis pretium
+            quis.
           </p>
           <p>
-            Just a little help for those who want to join communities, or just want to spend
-            somehow their free tirm. The time was short, they worked a lot, but in the end,
-            the project coming alive. Or at least they hoped, becouse when I wrote this we
-            were only in the middle of the progress. But be positive, we will prevail.
+            Curabitur volutpat ullamcorper sapien. Morbi venenatis ante sapien, id
+            suscipit massa bibendum faucibus. In ligula dui, tincidunt ac eros vitae,
+            ultricies semper ligula.
           </p>
         </div>
       </div>

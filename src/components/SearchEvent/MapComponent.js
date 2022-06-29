@@ -1,5 +1,5 @@
-import {useState, useEffect, useRef} from 'react';
-import {Link} from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 /* Style */
 import './Style/MapComponent.css';
@@ -7,7 +7,7 @@ import './Style/MapComponent.css';
 /* Image */
 import eventImagePlaceholder from '../../others/logo/logo7.3.png';
 
-const MapComponent = ({eventInfo}) => {
+const MapComponent = ({ eventInfo }) => {
   const [map, setMap] = useState();
   const [marker, setMarker] = useState();
   const ref = useRef(null);
@@ -25,7 +25,7 @@ const MapComponent = ({eventInfo}) => {
       map.setOptions({
         zoom: 6.5,
         // center: { lat: eventInfo[1]?.geoLat, lng: eventInfo[1]?.geoLng },
-        center: {lat: 47.162494, lng: 19.503304},
+        center: { lat: 47.162494, lng: 19.503304 },
         // disableDefaultUI: true,
         mapTypeControl: false,
         streetViewControl: false,
@@ -52,7 +52,7 @@ const MapComponent = ({eventInfo}) => {
         const [key, value] = event;
 
         const newMarker = new window.google.maps.Marker({
-          position: {lat: Number(value?.geoLat), lng: Number(value?.geoLng)},
+          position: { lat: Number(value?.geoLat), lng: Number(value?.geoLng) },
           map,
           optimized: true,
           animation: window.google.maps.Animation.DROP,
@@ -106,7 +106,7 @@ const MapComponent = ({eventInfo}) => {
 
   return (
     <>
-      <div className='goole-maps-search-container' ref={ref}></div>
+      <div> {/*className='goole-maps-search-container' ref={ref}>*/}</div>
     </>
   );
 };

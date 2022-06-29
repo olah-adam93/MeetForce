@@ -1,14 +1,13 @@
 import { loadStripe } from '@stripe/stripe-js';
 import { useState, useEffect } from 'react';
 
-
 let stripePromise;
 
 // call before redirect the user to checkout
 const getStripe = () => {
   if (!stripePromise) {
     stripePromise = loadStripe(
-      'pk_test_51KuevLHfpw3nPJ5tDhBVqdAnh9HwL4QBwWei4DvG7tbrPAAfFSzTCUjakpTfT74PIHqvbbSDkOBxGVe5pfmdUPIU00Zrip53pp'
+      'pk_test_51LFvtLAftGq1GnERHaj2tSoee46DYq6CQDtO3SLtfIuYnQ2pcdbKqLci5rFC4uIjqcz5NBxtcZgO8YKevaPEpVcP00V24MI4tA'
     );
   }
   return stripePromise;
@@ -25,23 +24,23 @@ const StripePayment = ({ eventKey, eventValue }) => {
   const prices = {
     category_1: {
       price: '1000',
-      key: 'price_1L1rx2Hfpw3nPJ5t8Jiw0e9l',
+      key: 'price_1LFvxdAftGq1GnER9iBH7aIw',
     },
     category_2: {
       price: '2000',
-      key: 'price_1L1ryeHfpw3nPJ5tCink0ZtY',
+      key: 'price_1LFvzdAftGq1GnERqyHhvhWX',
     },
     category_3: {
       price: '5000',
-      key: 'price_1L1rzAHfpw3nPJ5to2o8U0Yv',
+      key: 'price_1LFw0ZAftGq1GnERiEUuzkbm',
     },
     category_4: {
       price: '10000',
-      key: 'price_1L1rzXHfpw3nPJ5tvrva4t5c',
+      key: 'price_1LFw12AftGq1GnERimOehAb4',
     },
     category_5: {
       price: '20000',
-      key: 'price_1L1rzmHfpw3nPJ5tiplKQN9I',
+      key: 'price_1LFw1bAftGq1GnERms4lDMpq',
     },
   };
 
@@ -59,16 +58,6 @@ const StripePayment = ({ eventKey, eventValue }) => {
       }
     });
   }, []);
-
- /*  useEffect(() => {
-    setCheckoutOptions({
-      lineItems: [product],
-      mode: 'payment',
-      // successUrl: `${window.location.origin}/eventpage?success=true`, 
-      successUrl: `${window.location.origin}/eventpage/${eventKey}?success=true`,
-      cancelUrl: `${window.location.origin}/eventpage/${eventKey}?success=false`,
-    });
-  }, [product]); */
 
   useEffect(() => {
     setCheckoutOptions({
@@ -100,7 +89,11 @@ const StripePayment = ({ eventKey, eventValue }) => {
   if (stripeError) alert(stripeError);
 
   return (
-    <button className='event-info-button' onClick={redirectToCheckout} disabled={isLoading}>
+    <button
+      className='event-info-button'
+      onClick={redirectToCheckout}
+      disabled={isLoading}
+    >
       {isLoading ? 'Loading...' : 'Pay now'}
     </button>
   );

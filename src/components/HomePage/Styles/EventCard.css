@@ -26,7 +26,7 @@
   width: 100%;
   padding: 1rem;
   box-shadow: var(--primary-box-shadow);
-  transition: box-shadow .2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }
 
 .event-card:hover {
@@ -70,7 +70,12 @@
   font-size: 3.5rem;
   font-family: 'Kanit', sans-serif;
   font-weight: bold;
-  background: linear-gradient(90deg, rgba(175,68,72,1) 23%, rgba(158,39,41,1) 54%, rgba(94,0,0,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(7, 67, 159) 23%,
+    rgb(5, 55, 129) 54%,
+    rgb(3, 29, 68) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -90,7 +95,7 @@
 }
 
 .event-data-title {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   font-weight: bold;
   font-size: var(--h4-font-size);
   text-decoration: none;
@@ -100,7 +105,7 @@
 
 .event-data-location {
   color: var(--tertiary-text-color);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .event-data-attendees {
@@ -110,7 +115,6 @@
   right: 0;
   color: var(--tertiary-text-color);
 }
-
 
 /* Event Card Search View Style */
 .event-card-container-search {
@@ -129,7 +133,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  transition: box-shadow .2s ease-in;
+  transition: box-shadow 0.2s ease-in;
   display: flex;
   align-items: flex-start;
   padding-top: 1rem;
@@ -177,7 +181,12 @@
   font-size: 3.5rem;
   font-family: 'Kanit', sans-serif;
   font-weight: bold;
-  background: linear-gradient(90deg, rgba(175,68,72,1) 23%, rgba(158,39,41,1) 54%, rgba(94,0,0,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(7, 67, 159) 23%,
+    rgb(5, 55, 129) 54%,
+    rgb(3, 29, 68) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -199,7 +208,7 @@
 }
 
 .event-data-title-search {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   font-weight: bold;
   font-size: var(--h4-font-size);
   text-decoration: none;
@@ -208,7 +217,7 @@
 
 .event-data-location-search {
   color: var(--tertiary-text-color);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .event-data-attendees-search {
@@ -239,7 +248,7 @@
   font-size: 1.6rem;
   border: none;
   color: var(--button-text-color);
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   margin-left: 3rem;
 }
 
