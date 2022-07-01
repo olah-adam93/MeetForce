@@ -23,12 +23,16 @@ const EventCard = ({
   unsubscribeModalHandler,
   deleteModalHandler,
 }) => {
-  const [attendees, setAttendees] = useState([]);
+  const [attendeesNb, setAttendeesNb] = useState([]);
+  const [attendeesNm, setAttendeesNm] = useState([]);
   const authContext = useContext(AuthContext);
 
   useEffect(() => {
     readData('eventAttendees', eventId).then((snapshot) => {
-      setAttendees(Object.keys(snapshot.val() || {}));
+      setAttendeesNb(Object.keys(snapshot.val() || {}));
+    });
+    readData('eventAttendees', eventId).then((snapshot) => {
+      setAttendeesNm(Object.keys(snapshot.val() || {}));
     });
   }, [eventId]);
 
@@ -134,7 +138,8 @@ const EventCard = ({
                 eventSearchStyle ? 'event-data-attendees-search' : 'event-data-attendees'
               }
             >
-              {attendees.length === 0 ? 0 : attendees.length} attendees
+              {attendeesNb.length === 0 ? 0 : attendeesNb.length} attendees
+              {}
             </p>
           </div>
         </div>

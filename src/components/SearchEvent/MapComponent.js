@@ -104,11 +104,7 @@ const MapComponent = ({ eventInfo }) => {
     }
   }, [marker, map, eventInfo]);
 
-  return (
-    <>
-      <div> {/*className='goole-maps-search-container' ref={ref}>*/}</div>
-    </>
-  );
+  return <>{/*<div className='goole-maps-search-container' ref={ref}></div>*/}</>;
 };
 
 export default MapComponent;

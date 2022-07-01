@@ -10,18 +10,13 @@
 
   --primary-background-image: linear-gradient(
     to bottom,
-    #f3f4f5,
-    #f2f2f3,
-    #f1f1f2,
-    #efeff0,
-    #eeeeee,
-    #ebebeb,
-    #e7e7e7,
-    #e4e4e4,
-    #dedede,
-    #d8d8d8,
-    #d3d2d2,
-    #cdcccc
+    #f3f4f5 10%,
+    #f2f2f3 14%,
+    #f1f1f2 18%,
+    #efeff0 22%,
+    #eeeeee 26%,
+    #ebebeb 28%,
+    #e7e7e7 30%
   );
 
   --primary-navbar-text-color: #031d44;

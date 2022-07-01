@@ -4,19 +4,19 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import {useEffect, useState, useContext} from 'react';
+import { useEffect, useState, useContext } from 'react';
 
 /* Database Context */
-import {EventDbContext} from '../EventDbContext/EventDbContext';
+import { EventDbContext } from '../EventDbContext/EventDbContext';
 
 /* Components */
 import EventCard from './EventCard';
 
 // Import Swiper React components
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Pagination, Navigation} from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, EffectCoverflow } from 'swiper';
 
-export default function EventSlider({containerName, searchKey, searchValue}) {
+export default function EventSlider({ containerName, searchKey, searchValue }) {
   const eventDb = useContext(EventDbContext);
   const [eventsCard, setEventsCard] = useState([]);
 
@@ -33,7 +33,7 @@ export default function EventSlider({containerName, searchKey, searchValue}) {
         return null;
       }
     });
-    
+
     // console.log('datearr: ', dateArray);
 
     const sortedByDateArr = dateArray.sort((a, b) => {
@@ -48,16 +48,16 @@ export default function EventSlider({containerName, searchKey, searchValue}) {
       <div className='event-slider-container'>
         <h2 className='slider-container-name'>{containerName}</h2>
         <Swiper
-          slidesPerView={4}
-          // spaceBetween={0}
+          slidesPerView={3}
           loop={false}
-          navigation={false}
+          effect='coverflow'
+          navigation={true}
           pagination={{
             clickable: true,
             dynamicBullets: true,
             dynamicMainBullets: 6,
           }}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Navigation, EffectCoverflow]}
           className='swiper'
         >
           {eventsCard.map((event) => {
