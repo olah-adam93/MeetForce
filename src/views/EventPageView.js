@@ -1,8 +1,8 @@
-import {useEffect, useContext, useState} from 'react';
-import {useParams, useSearchParams} from 'react-router-dom';
+import { useEffect, useContext, useState } from 'react';
+import { useParams, useSearchParams } from 'react-router-dom';
 
 /* Googe Maps */
-import {Wrapper} from '@googlemaps/react-wrapper';
+import { Wrapper } from '@googlemaps/react-wrapper';
 
 /* Components */
 import EventDetails from '../components/HomePage/EventDetails';
@@ -15,19 +15,19 @@ import EventInfoMap from '../components/HomePage/EventInfoMap';
 import './Style/EventPageView.css';
 
 /* Database Context */
-import {EventDbContext} from '../components/EventDbContext/EventDbContext';
+import { EventDbContext } from '../components/EventDbContext/EventDbContext';
 import NotFound from '../others/NotFound';
 
 /* CRUD */
-import {updateData} from '../services/crud';
+import { updateData } from '../services/crud';
 
 /* Firebase */
-import {auth} from '../config/firebase';
+import { auth } from '../config/firebase';
 
 const EventPageView = () => {
   const user = auth.currentUser;
   const eventDb = useContext(EventDbContext);
-  const {eventId} = useParams();
+  const { eventId } = useParams();
   const [searchParams] = useSearchParams();
   const [eventInfo, setEventInfo] = useState([]);
   const [paymentSucces, setPaymentSuccess] = useState(false);
@@ -80,7 +80,7 @@ const EventPageView = () => {
                 </div>
 
                 <div className='event-page-second-wrapper'>
-                  <EventDetails eventInfo={eventInfo[1]} />
+                  <EventDetails eventInfo={eventInfo[1]} eventId={eventId} />
                   <EventInfo
                     eventInfo={eventInfo}
                     isOpen={isOpen}
@@ -95,15 +95,6 @@ const EventPageView = () => {
                   <EventInfoMap eventInfo={eventInfo[1]} />
                 </Wrapper>
               )}
-
-              {/*  {isOpen && (
-            <JoinModal
-              clickHandler={clickHandler}
-              setIsOpen={setIsOpen}
-              eventKey={eventInfo[0]}
-              eventValue={eventInfo[1]}
-            />
-          )} */}
             </>
           )}
         </div>

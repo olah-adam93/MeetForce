@@ -64,6 +64,7 @@
 .layout-container {
   margin: 0 auto;
   min-height: 100vh;
+  min-width: 36rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,9 +73,9 @@
 }
 
 .layout-inner-container {
-  min-width: 1080px;
+  min-width: 36rem;
   width: 80%;
-  max-width: 1400px;
+  max-width: 140rem;
   /*Description: min-height: calc(100vh - header height: 10rem & footer height: 5rem*/
   min-height: calc(100vh - 15rem);
   /* fix header height */

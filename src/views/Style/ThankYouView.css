@@ -18,3 +18,28 @@
   margin-top: 5rem;
   gap: 5rem;
 }
+
+@media only screen and (max-width: 1200px) {
+  .thank-you-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 34rem;
+    margin: auto;
+  }
+
+  .info-box-container {
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    gap: 5rem;
+  }
+
+  .info-box-card {
+    width: 34rem;
+    margin: auto;
+  }
+}

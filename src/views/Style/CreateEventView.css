@@ -17,40 +17,43 @@
 
 .create-new-event-container .new-event-form .basic-info-box,
 .time-of-event,
-.location-container, .new-event-info-container, .new-event-payment-container {
+.location-container,
+.new-event-info-container,
+.new-event-payment-container {
   margin-bottom: 6rem;
   padding: 0 1rem;
-  max-width: 50vw;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+  width: 50vw;
 }
-.event-time-box{
+.event-time-box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 3rem;
   margin: 0 2rem 0 3rem;
   justify-content: space-evenly;
-  
 }
-.event-time-box div{
+.event-time-box div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 75%;
-
 }
 
 .location-container .location-type {
   margin-bottom: 3rem;
 }
-.create-new-event-container .new-event-form .time-of-event label {
-  display: inline-block;
+
+.location-container .location-type,
+.location-container .location-type,
+.location-type-category {
+  display: flex;
+  flex-direction: row;
 }
-/* .create-new-event-container .new-event-form .time-of-event input{
-  
-} */
+
+.create-new-event-container .new-event-form .time-of-event label {
+  display: inline;
+}
+
 .create-new-event-container .new-event-form .time-of-event {
   background-color: var(--secondary-background-color);
   padding: 3rem 1rem;
@@ -62,7 +65,7 @@
 
 .create-new-event-container h1 {
   font-size: var(--h1-font-size);
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 .create-new-event-container .new-event-form h2 {
   font-size: var(--h2-font-size);
@@ -75,7 +78,6 @@
   font-size: var(--h3-font-size);
   margin-bottom: 1rem;
   margin-left: 1rem;
-
 }
 .create-new-event-container .new-event-form label {
   font-size: var(--form-label-font-size);
@@ -89,8 +91,9 @@
 .required {
   color: var(--fourthly-text-color);
 }
-.missing-data{
-  color: var(--fourthly-text-color)
+.create-new-event-container .missing-data {
+  color: var(--fourthly-text-color);
+  font-size: var(--h3-font-size);
 }
 /*inputs, buttons, select, textarea..*/
 .create-new-event-container .new-event-form input,
@@ -101,6 +104,22 @@
   padding: var(--form-input-padding);
   border-radius: var(--form-input-border-radius);
   border: 1px solid var(--form-input-border-color);
+  width: 22rem;
+  height: 4.4rem;
+}
+
+.create-new-event-container .new-event-form input {
+  width: 15.2rem;
+}
+
+.create-new-event-container .new-event-form input[type='radio' i] {
+  margin: 1rem 1rem 0 2rem;
+  font-size: var(--form-label-font-size);
+  padding: var(--form-input-padding);
+  border-radius: var(--form-input-border-radius);
+  border: 1px solid var(--form-input-border-color);
+  width: 4rem;
+  height: 2rem;
 }
 .create-new-event-container .new-event-form input:hover,
 .new-event-form select:hover,
@@ -111,7 +130,7 @@
   margin: 2rem 1rem;
 }
 .create-new-event-container .new-event-form .btn-container {
- /*  height: 5rem; */
+  /*  height: 5rem; */
   margin: 1rem 0;
   width: 50vw;
 }
@@ -149,7 +168,7 @@
 .create-new-event-container .new-event-form .new-event-details textarea {
   width: 50vw;
   min-height: 30rem;
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem;
   padding: 2px;
   box-shadow: var(--primary-box-shadow);
   resize: none;
@@ -164,17 +183,18 @@
 }
 /*Map*/
 .map-box {
-  width: 100%;
+  min-width: 32rem;
   background-color: var(--secondary-background-color);
-  padding: 2rem 0;
+  padding: 1rem 0;
+  margin: auto;
   box-shadow: var(--primary-box-shadow);
   border-radius: var(--card-border-radius);
 }
-.hidden{
+.hidden {
   /* visibility: hidden; */
   display: none;
 }
-.visible{
+.visible {
   /* visibility: visible; */
   display: block;
 }
@@ -186,7 +206,7 @@
 }
 
 /*details*/
-.new-event-info-container{
+.new-event-info-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,30 +223,26 @@
   text-align: center;
   box-shadow: var(--primary-box-shadow);
   border-radius: var(--card-border-radius);
-  margin: 1rem 2rem 4rem 2rem;
+  margin: 1rem 1rem 4rem 1rem;
   padding: 5rem;
   background-color: var(--secondary-background-color);
 }
-.pic-box p{
-  color: var(--fourthly-text-color)
+.pic-box p {
+  color: var(--fourthly-text-color);
 }
-/* .add-image-event-container img {
-  width: 30rem;
-  height: auto;
-} */
 
 /*payment*/
-.ticket-details-flex{
+.ticket-details-flex {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.new-event-payment-container{
+.new-event-payment-container {
   width: 50vw;
 }
 .create-new-event-container .new-event-form .new-event-payment-container {
   min-height: 69rem;
-  min-width: 38rem;
+  min-width: 34rem;
   /* display: flex;
   align-items: center;
   flex-direction: column; */
@@ -238,13 +254,12 @@
   margin-left: 3rem;
   margin-bottom: 4rem;
 }
-.ticket-details{
+.ticket-details {
   background-color: var(--secondary-background-color);
   border-radius: var(--card-border-radius);
   box-shadow: var(--primary-box-shadow);
   padding: 3rem 1rem;
   width: fit-content;
-
 }
 .ticket-pricing-information,
 .ticket-validation {
@@ -254,7 +269,64 @@
   margin: 1rem;
   min-height: 28rem;
 }
-/* .btn-container{
-  position: absolute;
-  
-} */
+
+@media only screen and (max-width: 1280px) {
+  .event-time-box div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+  }
+  .time-of-event {
+    width: 34rem;
+  }
+
+  /*.add-image-event-container,
+  .new-event-description {
+    margin: auto;
+  }*/
+
+  .create-new-event-container
+    .new-event-form
+    .basic-event-info
+    .location-container
+    .location-type
+    label {
+    display: inline-block;
+  }
+
+  .create-new-event-container
+    .new-event-form
+    .new-event-details
+    .add-image-event-container
+    .pic-box,
+  .create-new-event-container .new-event-form .new-event-details textarea,
+  .create-new-event-container .new-event-form .new-event-payment-container {
+    width: 34rem;
+    margin: 4rem auto;
+  }
+
+  .create-new-event-container .new-event-form input {
+    width: 15.2rem;
+  }
+
+  .create-new-event-container .new-event-form .btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .create-new-event-container .new-event-form h3 {
+    text-align: left;
+  }
+
+  .create-new-event-container .new-event-form button.back-btn {
+    margin-right: auto;
+  }
+
+  .create-new-event-container .new-event-form button.next-btn,
+  .create-new-event-container .new-event-form button.save-btn {
+    margin-left: auto;
+  }
+}

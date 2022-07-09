@@ -13,7 +13,7 @@
   padding: 2rem;
   background-color: var(--secondary-background-color);
   border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
-  box-shadow: /* #870000a5 0px 5px, */0 2px 8px 0 rgb(0 0 0 / 15%), #af4448bd 0px 2px, #bc4b4ebd 0px 4px;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%), #316fcd 0px 2px, #0d5fdb 0px 4px;
 }
 .profile .profile-head div {
   margin: 1rem;
@@ -73,53 +73,75 @@
 
 .profile .profile-main .user-head .events .events-box {
   margin: 12rem 0;
-  
 }
-.plane-icon{
+.plane-icon {
   margin-right: 1rem;
-  color: var(--tertiary-background-color)
+  color: var(--tertiary-background-color);
 }
-.profile .events-box{
-  /* box-shadow: var(--primary-box-shadow); */
+/*.profile .events-box {
   border-top: 1px solid var(--fourthly-text-color);
-}
-.profile .divide{
+}*/
+
+.profile .divide {
   height: 1rem;
 }
 /*Statisztika*/
-.profile-statistics{
+.profile-statistics {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 7rem;
+  border-bottom: 1px solid var(--fourthly-text-color);
 }
-.profile-statistics h2{
+.profile-statistics h2 {
   font-size: var(--h2-font-size);
   color: var(--fourthly-text-color);
 }
-.profile-statistics h3{
+.profile-statistics h3 {
   margin: 2rem;
   font-weight: 500;
 }
-.profile-statistics span{
+.profile-statistics span {
   color: var(--fourthly-text-color);
   font-style: italic;
   /* transition: linear, transform 2s;
   transform: rotate(360deg); */
- /*  animation-name: rotate;
+  /*  animation-name: rotate;
   animation-duration: 2s;
   animation-iteration-count: infinite; */
 }
-.profile-statistics img{
+.profile-statistics img {
   width: 50rem;
   vertical-align: middle;
-  margin: 2rem;
-  
+  margin: 4rem auto 0 auto;
 }
-/* @keyframes rotate{
 
-  to{
-    transform: rotateX(360deg)
+@media only screen and (max-width: 992px) {
+  /*.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 34rem;
+  }*/
+
+  .profile .profile-head {
+    flex-direction: column;
   }
-} */
+
+  .profile-head-avatar-container {
+    text-align: center;
+  }
+
+  .profile-head-information {
+    border-left: none;
+    border-top: 1px solid var(--tertiary-background-color);
+  }
+
+  .profile-statistics {
+    flex-direction: column;
+  }
+  .profile-statistics img {
+    width: 34rem;
+  }
+}

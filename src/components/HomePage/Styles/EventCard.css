@@ -3,7 +3,7 @@
   height: 85%;
   min-width: 24rem;
   width: 90%;
-  max-width: 27rem;
+  max-width: 28rem;
 }
 
 .event-card-inner-container {
@@ -145,7 +145,7 @@
 
 /* Image ------------------------ */
 .event-picture-container-search {
-  width: 22rem;
+  max-width: 22rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 100%;
+  width: 22rem;
 }
 
 .event-picture-img-search {
@@ -197,6 +197,7 @@
   line-height: 1.5;
   padding-left: 2rem;
   flex-grow: 2;
+  /*min-height: 20rem;*/
   position: relative;
 }
 
@@ -254,4 +255,19 @@
 .event-card-button button:hover {
   background-color: var(--button-hover-background-color);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .event-picture-container-search,
+  .event-picture-img-search,
+  .event-picture-img-link-search {
+    width: 22rem;
+  }
+  .event-data-title-search {
+    font-size: 1.3rem;
+  }
+  .event-data-search {
+    height: 24rem;
+    font-size: 1.3rem;
+  }
 }

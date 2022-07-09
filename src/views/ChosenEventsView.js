@@ -1,16 +1,16 @@
 import './Style/ChosenEventView.css';
 import joined_event from '../others/decoration/joined_event.svg';
-import {useState, useContext, useEffect} from 'react';
+import { useState, useContext, useEffect } from 'react';
 import DisplayItems from '../components/SearchEvent/DisplayItems';
 
 /* Database Context */
-import {EventDbContext} from '../components/EventDbContext/EventDbContext';
+import { EventDbContext } from '../components/EventDbContext/EventDbContext';
 
 /* AuthContext */
-import {auth} from '../config/firebase';
+import { auth } from '../config/firebase';
 
 /* CRUD */
-import {liveValue} from '../services/crud';
+import { liveValue } from '../services/crud';
 
 const ChosenEventsView = () => {
   const eventDb = useContext(EventDbContext);
@@ -48,12 +48,6 @@ const ChosenEventsView = () => {
     setEventsCard(filteredArray);
     console.log('filtered arr: ', filteredArray);
   }, [eventDb, user, eventJoined]);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  // }, []);
 
   return (
     <>

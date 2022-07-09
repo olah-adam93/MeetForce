@@ -6,17 +6,16 @@
 
 .slider-message {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   left: 0;
-  height: 35rem;
-  width: 42rem;
+  min-height: 35rem;
+  min-width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 4rem;
   transform: translate(8rem, -2rem);
-  /* transform: translateY(-10rem); */
 }
 
 .slider-message a {
@@ -40,4 +39,39 @@
   text-align: left;
   margin-bottom: 1rem;
   color: var(--secondary-text-color);
+}
+
+@media only screen and (max-width: 992px) {
+  .slider-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 35rem;
+    min-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: auto;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+    transform: translate(2rem, -2rem);
+  }
+
+  .slider-message-text {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--secondary-text-color);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .slider-message-text {
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--secondary-text-color);
+  }
 }

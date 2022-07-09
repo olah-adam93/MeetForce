@@ -1,5 +1,6 @@
 .header-container {
   width: 100%;
+  min-width: 36rem;
   height: 8rem;
   display: flex;
   justify-content: center;
@@ -17,9 +18,10 @@
 }
 
 .header-inner-container {
-  min-width: 1080px;
+  min-width: 36rem;
+  /*max-width: 108rem;*/
   width: 80%;
-  max-width: 1400px;
+  max-width: 140rem;
   display: flex;
   justify-content: space-between;
 }
@@ -28,11 +30,6 @@
   display: flex;
   align-items: center;
 }
-
-/* .header-logo-img {
-  width: 15rem;
-  transition: width 0.3s ease-out;
-} */
 
 .header-logo-navlink {
   text-decoration: none;

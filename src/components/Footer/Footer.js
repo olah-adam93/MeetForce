@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 /* Style */
 import './Footer.css';
@@ -6,7 +6,6 @@ import './Footer.css';
 const Footer = () => {
   return (
     <div className='footer-nav'>
-      
       <div className='footer-links'>
         <ul>
           <li>
@@ -22,14 +21,8 @@ const Footer = () => {
       </div>
 
       <div className='footer-logo'>
-        <p>© 2022 MeetAtSix</p>
-        {/* <img
-          className={`footer-img`}
-          src={require('./meetatsix200.49.feher.png')}
-          alt='logo'
-        /> */}
+        <p>© 2022 Adam Olah</p>
       </div>
-
     </div>
   );
 };

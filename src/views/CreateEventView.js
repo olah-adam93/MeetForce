@@ -31,7 +31,7 @@ const CreateEventView = () => {
   });
   const [locationtype, setLocationType] = useState('');
   const [nextbtn, setNextBtn] = useState(0);
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
     console.log(data);
   }, [data]);
@@ -46,11 +46,11 @@ const CreateEventView = () => {
         !data.startTime ||
         !data.endTime ||
         !data.type ||
-        !data.category||
+        !data.category ||
         data.attendant < 0 ||
-        Number(new Date(data.eventStarts)) > Number(new Date(data.eventEnds)) 
+        Number(new Date(data.eventStarts)) > Number(new Date(data.eventEnds))
         //Number(new Date(data.eventStarts)) === Number(new Date(data.eventEnds)) && data.startTime data.endTime
-        
+
         //attendant ne lehessen - eredmény
       ) {
         setMissingData(true);
@@ -85,21 +85,9 @@ const CreateEventView = () => {
       setNextBtn((prev) => (prev -= 1));
     }
   };
-  /*  const onUploadImage = (e) => {
-    const fileRef = ref(storage, `eventImages/${data?.image.name}`)
-    uploadBytes(fileRef, data?.image)
-    .then((uploadResult) =>{console.log("first");
-      getDownloadURL(uploadResult?.ref)
-      .then((value) => {setData((prev) => ({ ...prev, imageUrl: value }));
-      console.log("second")
-    })
-      .catch((e) => console.log(e));
-    })
-    .catch((e) => console.log(e));
-  } */
   const submitHandler = (e) => {
     e.preventDefault();
-    
+
     if (
       !data.title ||
       !data.locationType ||
@@ -108,7 +96,7 @@ const CreateEventView = () => {
       !data.startTime ||
       /* Number(new Date(data.eventStarts)) < Number(new Date(data.eventEnds)) || */
       !data.paymentType ||
-      data.paymentType === "ticket" && !data.ticketPrice||
+      (data.paymentType === 'ticket' && !data.ticketPrice) ||
       !data.endTime
       //attendant ne lehessen - eredmény
     ) {
@@ -119,23 +107,22 @@ const CreateEventView = () => {
     } else {
       const currentDate = new Date(Date.now()).toUTCString().slice(-24, -4);
       console.log(currentDate);
-      if(data?.image){
-
-        const fileRef = ref(storage, `eventImages/${data?.image.name}`)
-        uploadBytes(fileRef, data?.image)
-        .then((uploadResult) =>{console.log("first");
-          getDownloadURL(uploadResult?.ref)
-          .then((value) => {
+      if (data?.image) {
+        const fileRef = ref(storage, `eventImages/${data?.image.name}`);
+        uploadBytes(fileRef, data?.image).then((uploadResult) => {
+          console.log('first');
+          getDownloadURL(uploadResult?.ref).then((value) => {
             //setData((prev) => ({ ...prev, imageUrl: value }));
-            createNewData('events', { ...data, createdDate: currentDate, imageUrl: value })
-          })
-        })
-      } else{
-        createNewData('events', { ...data, createdDate: currentDate })
+            createNewData('events', {
+              ...data,
+              createdDate: currentDate,
+              imageUrl: value,
+            });
+          });
+        });
+      } else {
+        createNewData('events', { ...data, createdDate: currentDate });
       }
-      //createNewData('events', { ...data, createdDate: currentDate })
-      
-      /* createNewData('events', data) */
       setData({});
       console.log('done');
       navigateTo('/create-success');
@@ -145,7 +132,9 @@ const CreateEventView = () => {
     <div className='create-new-event-container'>
       <h1>Create New Event</h1>
       {missingData && (
-        <h1 className='missing-data'>Missing data! Please fill out every required field!</h1>
+        <h1 className='missing-data'>
+          Missing data! Please fill out every required field!
+        </h1>
       )}
       <div className='new-event-form'>
         <form action='' onSubmit={submitHandler}>
@@ -158,7 +147,7 @@ const CreateEventView = () => {
               <LocationOfEvent
                 setData={setData}
                 data={data}
-                visible ={visible}
+                visible={visible}
                 setVisible={setVisible}
               />
               {/*search location , click-et kijavítani, Vissza Gomb*/}
@@ -174,29 +163,29 @@ const CreateEventView = () => {
               <NewEventPayment setData={setData} data={data} />
             </div>
           )}
-
+          <h3 className='required'>*: required</h3>
           <div className='btn-container'>
-            {nextbtn > 0 && (<>
-              <button type='button' onClick={backFormPageHandler} className='back-btn'>
-                Back
-              </button>
-              
+            {nextbtn > 0 && (
+              <>
+                <button type='button' onClick={backFormPageHandler} className='back-btn'>
+                  Back
+                </button>
               </>
             )}
-            {nextbtn < 2 && (<>
-              <button type='button' onClick={nextFormPageHandler} className='next-btn'>
-                Next
-              </button>
+            {nextbtn < 2 && (
+              <>
+                <button type='button' onClick={nextFormPageHandler} className='next-btn'>
+                  Next
+                </button>
               </>
             )}
-            {nextbtn === 2 && (<>
-              <button type='submit' className='save-btn'>
-                Save event
-              </button>
+            {nextbtn === 2 && (
+              <>
+                <button type='submit' className='save-btn'>
+                  Save event
+                </button>
               </>
             )}
-            <h3 className='required'>*: required</h3>
-            
           </div>
         </form>
       </div>

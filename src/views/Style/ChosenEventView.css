@@ -1,6 +1,10 @@
 .chosen-events-container {
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   gap: 5rem;
 }
 
@@ -18,10 +22,10 @@
   width: 70%;
 }
 
-.joined-event-pic{
+.joined-event-pic {
   margin-top: 10rem;
   width: 100%;
-  /* height: ; */ 
+  /* height: ; */
 }
 
 .chosen-events-message-container {
@@ -34,4 +38,27 @@
   padding-top: 1rem;
   margin-top: 2rem;
   border-top: 1px solid var(--form-input-border-secondary-color);
+}
+
+@media only screen and (max-width: 1200px) {
+  .chosen-events-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 5rem;
+  }
+
+  .event-data-organizer-search,
+  .event-data-attendees-search {
+    display: none;
+  }
+  .chosen-events-content {
+    width: 100%;
+  }
+
+  .chosen-events-sidebar {
+    width: 0%;
+  }
 }

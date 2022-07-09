@@ -1,44 +1,64 @@
 .FAQ-main-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .FAQ-title {
-    text-align: center;
+  text-align: center;
 }
 
 .FAQ-main-container h1 {
-    font-size: var(--h1-font-size);
-    padding-bottom: 2rem
+  font-size: var(--h1-font-size);
+  padding-bottom: 2rem;
 }
 
 .FAQ-about {
-    font-size: var(--p-font-size);
-    padding-right: 2rem
+  font-size: var(--p-font-size);
+  padding-right: 2rem;
 }
 
 .FAQ-question {
-    margin-bottom: 1rem;
-    font-weight: 900;
+  margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 .FAQ-answer {
-    margin-bottom: 3rem
+  margin-bottom: 3rem;
 }
 
 .FAQ-summary {
-    margin-bottom: 4rem
+  margin-bottom: 4rem;
 }
 
 .FAQ-image-container {
-    width: 38%;
+  width: 38%;
 }
 
 .FAQ-container {
-    width: 60%
+  width: 60%;
 }
 
 .FAQ-image {
-    width: 125%;
-    height: auto;
+  width: 125%;
+  height: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .FAQ-main-container {
+    display: flex;
+    flex-direction: row;
+    min-width: 32rem;
+  }
+  .FAQ-container {
+    width: 100%;
+  }
+
+  .FAQ-image-container {
+    width: 0%;
+    display: none;
+  }
+
+  .FAQ-about {
+    margin-left: 3rem;
+  }
 }

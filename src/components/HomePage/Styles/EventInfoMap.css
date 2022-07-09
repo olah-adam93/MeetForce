@@ -20,7 +20,7 @@
   text-decoration: none;
   color: var(--primary-text-color);
   height: fit-content;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .google-maps-event-infowindow-date {
@@ -28,7 +28,6 @@
   font-weight: bold;
   color: var(--fourthly-text-color);
 }
-
 
 .google-maps-event-infowindow-img {
   width: 40%;

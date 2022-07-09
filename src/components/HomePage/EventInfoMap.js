@@ -89,7 +89,7 @@ const EventInfoMap = ({ eventInfo }) => {
     }
   }, [marker, map, eventInfo, infoWindow]);
 
-  return <>{/*<div className='goole-maps-event-container' ref={ref}></div>*/}</>;
+  return <>{<div className='goole-maps-event-container' ref={ref}></div>}</>;
 };
 
 export default EventInfoMap;

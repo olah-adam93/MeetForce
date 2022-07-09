@@ -39,7 +39,7 @@
 .settings-classification {
   padding: 1rem;
   min-height: 8rem;
-  width: 400px;
+  width: 36rem;
   margin: auto;
   display: flex;
 }
@@ -64,8 +64,9 @@
 
 .settings-location input,
 .settings-telephoneNumber input {
-  margin: 1rem 0 0 1rem;
+  margin: 1rem -1.1rem 0 1rem;
   width: 24.5rem;
+  height: 6rem;
   border-radius: var(--form-input-border-radius);
   border-color: var(--form-input-border-color);
   border: 1px solid;
@@ -97,8 +98,9 @@
 }
 
 .settings-date .input-date {
-  margin-left: 6.8rem;
+  margin: auto -1.1rem auto 7.8rem;
   width: 24.5rem;
+  height: 6rem;
   border-radius: var(--form-input-border-radius);
   border-color: var(--form-input-border-color);
   border: 1px solid;
@@ -110,6 +112,7 @@
 .settings-location .input-location {
   margin-left: 6.8rem;
   width: 24.5rem;
+  height: 6rem;
   border-radius: var(--form-input-border-radius);
   border-color: var(--form-input-border-color);
   border: 1px solid;
@@ -119,8 +122,9 @@
 }
 
 .settings-gender .select-gender {
-  margin: 1rem 0 0 7.3rem;
+  margin: 1rem -1.1rem 0 7.3rem;
   width: 24.5rem;
+  height: 6rem;
   border-radius: var(--form-input-border-radius);
   border-color: var(--form-input-border-color);
   border: 1px solid;
@@ -133,7 +137,7 @@
   padding: 1rem 0 2rem 0;
   min-height: 6.5rem;
   margin: auto;
-  width: 400px;
+  width: 36rem;
   display: flex;
 }
 
@@ -191,6 +195,7 @@
 .settings-image img {
   width: 80%;
   height: auto;
+  border-radius: var(--card-border-radius);
 }
 
 .settings-image .settings-icon {
@@ -268,4 +273,10 @@
   border-radius: var(--button-border-radius);
   cursor: pointer;
   margin: 3rem auto 1rem auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .settings-form-container .settings-form {
+    width: 100%;
+  }
 }

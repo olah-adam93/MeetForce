@@ -17,8 +17,12 @@
 
 .display-maps-container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 100rem;
   height: 30rem;
 }
 
-
+@media only screen and (max-width: 992px) {
+  .display-maps-container {
+    margin: 20rem auto 1rem auto;
+  }
+}

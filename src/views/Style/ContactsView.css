@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  min-width: 32rem;
+  /*width: 100%;*/
 }
 .contact-container h2 {
   font-size: var(--h1-font-size);
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 .contact-details {
   display: flex;
@@ -32,19 +33,17 @@
   box-shadow: var(--primary-box-shadow);
   margin: 2rem 4rem;
   padding: 2rem 0;
-  width: 100%;
+  width: 40rem;
   height: 60rem;
 }
-
-/*.contact-admin-paragraph .contact-div-box {
-  border-right:1px solid #af4448;
-}*/
 
 .contact-admin-paragraph div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  min-width: 34rem;
+  height: 60rem;
 }
 
 .avatar-icon {
@@ -67,9 +66,9 @@
 }
 .admin-icon {
   position: absolute;
-  top: -5rem;
+  top: -3.5rem;
   z-index: 0;
-  width: 35rem;
+  width: 32rem;
   margin: 2rem;
 }
 .requiredInformation {
@@ -86,11 +85,11 @@
   background-color: var(--secondary-background-color);
   padding: 3rem;
   margin-bottom: 6rem;
-  margin-top: 2rem;
+  /*margin-top: 2rem;*/
   border-radius: var(--card-border-radius);
   box-shadow: var(--primary-box-shadow);
   z-index: 10;
-  max-width: 100%;
+  min-width: 32rem;
   height: 60rem;
 }
 .contact-container .contact-details .contact-us-form input,
@@ -144,9 +143,9 @@
 }
 .new-mail-img {
   position: absolute;
-  top: -20rem;
+  top: -17.5rem;
   z-index: 0;
-  width: 35rem;
+  width: 32rem;
   margin: 2rem;
 }
 /*Modal*/
@@ -164,10 +163,6 @@
   justify-content: center;
 }
 .contact-container .display-modal-content {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   z-index: 1000;
   border-radius: 1rem;
   background-color: white;
@@ -204,4 +199,44 @@
 } */
 .contact-container .display-modal-content h3 {
   font-size: var(--h3-font-size);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 1280px) {
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .contact-admin-paragraph,
+  .contact-us-form {
+    width: 32rem;
+    margin: auto auto 10rem auto;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .contact-admin-paragraph,
+  .contact-us-form {
+    width: 32rem;
+    margin: auto auto 10rem auto;
+  }
+
+  .admin-icon {
+    position: absolute;
+    top: -3.5rem;
+    z-index: 0;
+    width: 32rem;
+    margin: 2rem;
+  }
+  .new-mail-img {
+    position: absolute;
+    top: -15rem;
+    z-index: 0;
+    width: 32rem;
+    margin: 2rem;
+  }
 }

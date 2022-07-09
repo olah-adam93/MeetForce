@@ -36,7 +36,10 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
       setAttendeesNo(Object.keys(snapshot.val() || {}));
       setAttendeesNm(Object.values(snapshot.val() || {}));
     });
-  }, [eventKey]);
+  }, []);
+
+  //console.log(attendeesNo);
+  //console.log(attendeesNm);
 
   const clickHandler = () => {
     /* setIsOpen(!isOpen);
@@ -100,8 +103,7 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
       )} */}
 
       <div className='event-info-attendees'>
-        {/*Attendees: {attendees.length === 0 ? 0 : attendees.length}*/}
-        {/*Attendees:{[attendeesNm]}*/}
+        Attendees: {attendeesNm.length === 0 ? 0 : attendeesNm.length}
       </div>
 
       {user?.uid !== eventValue?.uid && (

@@ -1,8 +1,8 @@
-import React, {useCallback} from 'react';
-import {useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCloudArrowUp} from '@fortawesome/free-solid-svg-icons';
-import {storage, auth} from '../../config/firebase';
+import React, { useCallback } from 'react';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { storage, auth } from '../../config/firebase';
 import {
   getStorage,
   ref,
@@ -10,9 +10,11 @@ import {
   getDownloadURL,
   deleteObject,
 } from 'firebase/storage';
-import {getAuth, updateProfile} from 'firebase/auth';
+import { createNewData, createUserData, updateData } from '../../services/crud';
+import { getAuth, updateProfile } from 'firebase/auth';
 const SettingsImage = () => {
   const [file, setFile] = useState({});
+  const [userAvatar, setUserAvatar] = useState({});
 
   const user = auth.currentUser;
   const updatePicture = useCallback(() => {
@@ -25,7 +27,8 @@ const SettingsImage = () => {
               photoURL: value,
             })
               .then(() => {
-                setFile((prev) => ({...prev, imageUrl: value}));
+                setFile((prev) => ({ ...prev, imageUrl: value }));
+                setUserAvatar((prev) => ({ ...prev, imageUrl: value }));
                 console.log('fent van', user.photoURL);
               })
               .catch((error) => {
@@ -37,9 +40,12 @@ const SettingsImage = () => {
       .catch((e) => console.log(e));
   }, [user, file.obj]);
   const onFileChange = (e) => {
-    setFile({obj: e.target.files[0]});
+    setFile({ obj: e.target.files[0] });
+    setUserAvatar({ obj: e.target.files[0] });
     console.log(e.target.files[0]);
   };
+  updateData('userDetails', user.uid, userAvatar);
+
   const deleteAvatar = () => {
     const picRef = ref(storage, `userAvatar/${user.uid}`);
     deleteObject(picRef)

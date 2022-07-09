@@ -1,9 +1,9 @@
-import {useState, useEffect, useRef} from 'react';
-import {Wrapper, Status} from '@googlemaps/react-wrapper';
+import { useState, useEffect, useRef } from 'react';
+import { Wrapper, Status } from '@googlemaps/react-wrapper';
 import GoogleMapLoader from './Map/GoogleMapLoader';
 import MapWrapped from './Map/MapWrapped';
 
-const LocationOfEvent = ({setData, data, visible, setVisible}) => {
+const LocationOfEvent = ({ setData, data, visible, setVisible }) => {
   const [map, setMap] = useState();
   /* const [visible, setVisible] = useState(false) */
 
@@ -18,7 +18,7 @@ const LocationOfEvent = ({setData, data, visible, setVisible}) => {
       }));
       setVisible(false);
     } else {
-      setData((prev) => ({...prev, [e.target.name]: e.target.value}));
+      setData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
       setVisible(true);
     }
   };
@@ -27,8 +27,8 @@ const LocationOfEvent = ({setData, data, visible, setVisible}) => {
     <div className='location-container'>
       <h2>Location</h2>
       <div className='location-type'>
-        <label htmlFor='venue'>
-          Venue*
+        <div className='location-type-category'>
+          <label htmlFor='venue'>Venue*</label>
           <input
             type='radio'
             name='locationType'
@@ -37,9 +37,9 @@ const LocationOfEvent = ({setData, data, visible, setVisible}) => {
             onChange={changeHandler}
             defaultChecked={data?.locationType === 'venue'}
           />
-        </label>
-        <label htmlFor='ticket'>
-          Online*
+        </div>
+        <div className='location-type-category'>
+          <label htmlFor='ticket'>Online*</label>
           <input
             type='radio'
             name='locationType'
@@ -48,7 +48,7 @@ const LocationOfEvent = ({setData, data, visible, setVisible}) => {
             id='online'
             defaultChecked={data?.locationType === 'online'}
           />
-        </label>
+        </div>
       </div>
 
       <div>

@@ -1,7 +1,8 @@
 .event-slider-container {
   width: 100%;
-  height: 450px;
-  margin-top: 5rem;
+  min-width: 36rem;
+  height: 45rem;
+  margin-top: 10rem;
 }
 
 .slider-container-name {
@@ -36,7 +37,7 @@
 }
 
 .event-slider-container .swiper {
-  margin-top: 5rem;
+  margin: 5rem auto;
   width: 100%;
   height: 100%;
 }
@@ -68,9 +69,3 @@
   width: 1rem !important;
   height: 1rem !important;
 }
-/* .slider-container  .swiper-button-prev,
-.slider-container  .swiper-button-next {
-  border: none;
-  color: black;
-  padding: -20px;
-} */

@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useParams, useEffect, useContext } from 'react';
+import { AuthContext } from '../Authentication/AuthContext';
 /* Style */
 import './Styles/EventCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarXmark, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-/* Image */
-import eventImagePlaceholder from '../../others/logo/logo7.3.png';
 
-import { AuthContext } from '../Authentication/AuthContext';
+/*Firebase*/
+import { storage } from '../../config/firebase';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 /* CRUD */
 import { readData } from '../../services/crud';
@@ -23,24 +24,22 @@ const EventCard = ({
   unsubscribeModalHandler,
   deleteModalHandler,
 }) => {
-  const [attendeesNb, setAttendeesNb] = useState([]);
+  const [userAvatarData, setUserAvatarData] = useState([]);
+  const [attendeesNo, setAttendeesNo] = useState([]);
   const [attendeesNm, setAttendeesNm] = useState([]);
+
   const authContext = useContext(AuthContext);
 
   useEffect(() => {
     readData('eventAttendees', eventId).then((snapshot) => {
-      setAttendeesNb(Object.keys(snapshot.val() || {}));
+      setAttendeesNo(Object.keys(snapshot.val() || {}));
     });
     readData('eventAttendees', eventId).then((snapshot) => {
-      setAttendeesNm(Object.keys(snapshot.val() || {}));
+      setAttendeesNm(Object.values(snapshot.val() || {}));
     });
   }, [eventId]);
 
-  // useEffect(() => {
-  //     liveValue(`eventAttendees/${eventId}`, (snapshot) => {
-  //       setAttendees(Object.keys(snapshot.val() || {}));
-  //     });
-  // }, [eventId]);
+  //console.log(attendeesNb);
 
   return (
     <div
@@ -89,15 +88,6 @@ const EventCard = ({
                 >
                   Meetforce
                 </p>
-                // <img
-                //   className={
-                //     eventSearchStyle
-                //       ? 'event-picture-default-img-search'
-                //       : 'event-picture-default-img'
-                //   }
-                //   src={eventImagePlaceholder}
-                //   alt='default event'
-                // />
               )}
             </div>
           </div>
@@ -129,7 +119,9 @@ const EventCard = ({
               {eventCard?.location || eventCard?.locationType}
             </p>
 
-            <p>Organizer: {eventCard?.organizer}</p>
+            <p className='event-data-organizer-search'>
+              Organizer: {eventCard?.organizer}
+            </p>
 
             {/* {attendees.includes(authContext.userLog.user.uid) && window.location.href.indexOf("profile") === -1 && window.location.href.indexOf("home") === -1 && <p className='event-data-joined-message-search'>Already joined!</p>} */}
 
@@ -138,8 +130,7 @@ const EventCard = ({
                 eventSearchStyle ? 'event-data-attendees-search' : 'event-data-attendees'
               }
             >
-              {attendeesNb.length === 0 ? 0 : attendeesNb.length} attendees
-              {}
+              {attendeesNo.length === 0 ? 0 : attendeesNo.length} attendees
             </p>
           </div>
         </div>

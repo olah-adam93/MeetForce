@@ -74,6 +74,7 @@ const SignUp = ({ submitForm }) => {
             gender: '',
             telephone: '',
             userIntroduction: '',
+            imageUrl: '',
           });
         }
       })

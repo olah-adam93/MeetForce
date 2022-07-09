@@ -1,20 +1,7 @@
 .filter-container {
   width: 100%;
   z-index: 10;
-  /* position: relative; */
-  /* background-image: url(../../../others/decoration/search_event.svg);
-  background-repeat: no-repeat;
-  background-size: 20rem;
-  background-position: right; */
 }
-
-/* .filter-bar-background {
-  transform: scaleX(-1);
-  width: 15rem;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-} */
 
 /* Search bar */
 .search-bar-container {
@@ -37,7 +24,7 @@
   padding: var(--form-input-padding);
   width: 30rem;
   font-size: 1.6rem;
-  transition: border .2s ease-in;
+  transition: border 0.2s ease-in;
 }
 
 .search-bar-form input:focus {
@@ -65,7 +52,7 @@
   font-size: 1.6rem;
   border: none;
   color: var(--button-text-color);
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   margin-left: 3rem;
 }
 
@@ -87,7 +74,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
 }
 
 .filter-bar-form select {
@@ -102,7 +88,7 @@
   text-align: left;
   padding: var(--form-input-padding);
   margin-right: 2rem;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   outline: none;
   /* Remove arrow */
   /* appearance: none; */
@@ -131,12 +117,51 @@
   font-size: 1.4rem;
   width: 18rem;
   padding: var(--form-input-padding);
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-.filter-bar-form input:focus{
+.filter-bar-form input:focus {
   border: 1px solid var(--form-hover-input-border-color);
   background-color: var(--secondary-background-color);
-  color: var( --primary-text-color);
+  color: var(--primary-text-color);
 }
 
+@media only screen and (max-width: 992px) {
+  .filter-bar-form {
+    display: inline-block;
+    margin: auto;
+    max-width: 38rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .filter-bar-form select {
+    margin-top: 1rem;
+  }
+
+  .filter-bar-form input,
+  .filter-bar-form select:last-child {
+    margin: 1rem 2rem 0 0;
+  }
+
+  .search-bar-form {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    position: relative;
+  }
+
+  .search-bar-form input {
+    box-shadow: var(--primary-box-shadow);
+    border: 1px solid transparent;
+    border-radius: var(--form-input-border-radius);
+    padding: var(--form-input-padding);
+    width: 20rem;
+    font-size: 1.6rem;
+    transition: border 0.2s ease-in;
+  }
+
+  .search-bar-reset-button {
+    display: none;
+  }
+}

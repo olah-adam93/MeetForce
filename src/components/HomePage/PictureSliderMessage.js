@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 
 /* Style */
@@ -13,9 +13,9 @@ import hiking from '../../others/images/hiking-unsplash.jpg';
 import team from '../../others/images/team-unsplash.jpg';
 
 /* Authentication Context */
-import {AuthContext} from '../Authentication/AuthContext';
+import { AuthContext } from '../Authentication/AuthContext';
 
-const PictureSliderMessage = ({message}) => {
+const PictureSliderMessage = ({ message }) => {
   const authContext = useContext(AuthContext);
 
   return (
@@ -33,18 +33,23 @@ const PictureSliderMessage = ({message}) => {
       )}
       {message === 'register' && (
         <div className='slider-message-container'>
-          <img src={festival} alt="Logo" />
+          <img src={festival} alt='Logo' />
           <div className='slider-message'>
             <div className='slider-message-text'>
-              Launch your dream event with our help
+              Launch your dream
+              <br /> event with our help
             </div>
-            {Object.values(authContext.userLog)?.length ? <NavLink to='/profile/addevent'>Create your event</NavLink> : <NavLink to='/signin'>Create your event</NavLink>}
+            {Object.values(authContext.userLog)?.length ? (
+              <NavLink to='/profile/addevent'>Create your event</NavLink>
+            ) : (
+              <NavLink to='/signin'>Create your event</NavLink>
+            )}
           </div>
         </div>
       )}
       {message === 'friend' && (
         <div className='slider-message-container'>
-          <img src={game} alt="Logo" />
+          <img src={game} alt='Logo' />
           <div className='slider-message'>
             <div className='slider-message-text'>
               Meet new people who share your interests
