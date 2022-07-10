@@ -7,8 +7,15 @@ import NavBarMain from './NavBarMain';
 /* Style */
 import './Header.css';
 
+/* Fontawesome */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faXmarkCircle } from '@fortawesome/free-regular-svg-icons';
+
 const Header = () => {
   const [small, setSmall] = useState(false);
+  const [navDrop, setNavDrop] = useState(false);
+  const [navDropOff, setNavDropOff] = useState(true);
 
   useEffect(() => {
     const scrollCallback = () =>
@@ -19,6 +26,15 @@ const Header = () => {
     return () => window.removeEventListener('scroll', scrollCallback);
   }, []);
 
+  const clickOpenHandler = () => {
+    setNavDrop(true);
+    setNavDropOff(false);
+  };
+  const clickCloseHandler = () => {
+    setNavDrop(false);
+    setNavDropOff(true);
+  };
+
   return (
     <div className={`header-container ${small ? 'header-small' : ''}`}>
       <div className='header-inner-container'>
@@ -28,16 +44,29 @@ const Header = () => {
             to='/'
           >
             <p>Meetforce</p>
-            {/* <img
-              className={`header-logo-img ${small ? 'img-small' : ''}`}
-              src={require('../../others/logo/meetatsix100.406.szines2.png')}
-              alt='logo'
-            /> */}
           </NavLink>
         </div>
-
         <div className='header-navbar'>
-          <NavBarMain />
+          {navDropOff && (
+            <FontAwesomeIcon
+              className={`navbar-icon-bars ${small ? 'navbar-icon-small' : ''}`}
+              icon={faBars}
+              onClick={clickOpenHandler}
+            />
+          )}
+          {navDrop && (
+            <FontAwesomeIcon
+              className={`navbar-icon-xmark ${small ? 'navbar-icon-small' : ''}`}
+              icon={faXmarkCircle}
+              onClick={clickCloseHandler}
+            />
+          )}
+          <NavBarMain
+            className='header-navbar-main'
+            navDrop={navDrop}
+            navDropOff={navDropOff}
+            small={small}
+          />
         </div>
       </div>
     </div>

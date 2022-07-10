@@ -15,6 +15,7 @@
   backdrop-filter: blur(10px);
   height: 5rem;
   box-shadow: var(--primary-box-shadow);
+  transition: all 0.3s ease-out;
 }
 
 .header-inner-container {
@@ -134,4 +135,116 @@
 .main-navbar-dropdown-content ul {
   display: flex;
   flex-direction: column;
+}
+
+.navbar-icon-bars,
+.navbar-icon-xmark {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  color: rgb(5, 55, 129);
+}
+
+.navbar-inner-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .header-small,
+  .header-logo-navlink-small {
+    display: none;
+    transition: all 0.3s ease-out;
+  }
+
+  .main-navbar {
+    display: none;
+    width: 0%;
+  }
+
+  .navbar-icon-bars,
+  .navbar-icon-xmark {
+    display: inline-block;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1003;
+    transition: 0.3s ease-in-out;
+  }
+
+  .navbar-icon-small {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgb(5, 55, 129);
+    transition: 0.3s ease-in-out;
+  }
+
+  /* Modal */
+
+  .display-navbar-modal-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .display-navbar-modal-content,
+  .navbar-inner-menu {
+    z-index: 1000;
+    border-radius: 1rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(242, 244, 245, 1) 20%,
+      rgba(242, 244, 245, 0.8) 40%,
+      rgba(242, 244, 245, 0.5) 60%,
+      rgba(242, 244, 245, 0.8) 80%,
+      rgba(242, 244, 245, 1) 100%
+    );
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: 2.4rem;
+  }
+
+  .display-navbar-modal-content button {
+    border: none;
+    font-size: 1.6rem;
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+  .display-navbar-modal-content button:hover {
+    background-color: var(--button-hover-background-color);
+  }
+
+  .display-navbar-modal-content button:nth-child(1) {
+    margin-right: 2rem;
+  }
 }
