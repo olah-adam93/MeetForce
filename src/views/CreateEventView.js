@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { storage } from '../config/firebase';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+
 /*Components */
 import BasicInfoForm from '../components/CreateNewEvent/BasicInfoForm';
 import LocationOfEvent from '../components/CreateNewEvent/LocationOfEvent';
@@ -11,9 +12,9 @@ import TimeOfEvent from '../components/CreateNewEvent/TimeOfEvent';
 import { createNewData } from '../services/crud';
 import { getAuth } from '@firebase/auth';
 import { useNavigate } from 'react-router';
+
 /*Style */
 import './Style/CreateEventView.css';
-import { async } from '@firebase/util';
 
 const CreateEventView = () => {
   const navigateTo = useNavigate();
@@ -24,7 +25,6 @@ const CreateEventView = () => {
     uid: user.uid,
     title: '',
     organizer: '',
-    /* attendant: undefined, */
     location: '',
     organizer: user.displayName,
     organizerEmail: user.email,
@@ -91,7 +91,7 @@ const CreateEventView = () => {
     if (
       !data.title ||
       !data.locationType ||
-      !data.eventStarts || //itt vizsgálja hogy a múltban jönne létre?
+      !data.eventStarts ||
       !data.eventEnds ||
       !data.startTime ||
       /* Number(new Date(data.eventStarts)) < Number(new Date(data.eventEnds)) || */
@@ -112,7 +112,6 @@ const CreateEventView = () => {
         uploadBytes(fileRef, data?.image).then((uploadResult) => {
           console.log('first');
           getDownloadURL(uploadResult?.ref).then((value) => {
-            //setData((prev) => ({ ...prev, imageUrl: value }));
             createNewData('events', {
               ...data,
               createdDate: currentDate,
@@ -133,7 +132,7 @@ const CreateEventView = () => {
       <h1>Create New Event</h1>
       {missingData && (
         <h1 className='missing-data'>
-          Missing data! Please fill out every required field!
+          Missing or invalid data! Please fill out every required field!
         </h1>
       )}
       <div className='new-event-form'>
@@ -150,7 +149,6 @@ const CreateEventView = () => {
                 visible={visible}
                 setVisible={setVisible}
               />
-              {/*search location , click-et kijavítani, Vissza Gomb*/}
             </div>
           )}
           {nextbtn === 1 && (

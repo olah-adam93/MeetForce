@@ -13,7 +13,8 @@
 }
 
 .FAQ-about {
-  font-size: var(--p-font-size);
+  font-size: var(--p-font-size-large);
+  letter-spacing: 0.1rem;
   padding-right: 2rem;
 }
 

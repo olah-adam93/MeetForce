@@ -10,7 +10,8 @@
 
 .privacy-main-container p,
 .privacy-main-container ul {
-  font-size: var(--p-font-size);
+  font-size: var(--p-font-size-large);
+  letter-spacing: 0.1rem;
   padding-bottom: 2rem;
 }
 

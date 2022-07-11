@@ -85,7 +85,8 @@
 
 .event-details-text {
   margin-bottom: 5rem;
-  text-align: justify;
+  font-size: var(--p-font-size-large);
+  letter-spacing: 0.1rem;
 }
 
 .event-details-tag-container {
@@ -116,7 +117,6 @@
 
 .event-details-useravatar-text {
   min-height: 2.5rem;
-  /*transition: 0.8s ease-in-out;*/
 }
 
 .event-details-useravatar {

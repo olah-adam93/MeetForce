@@ -1,6 +1,6 @@
-const TimeOfEvent = ({setData, data}) => {
+const TimeOfEvent = ({ setData, data }) => {
   const changeHandler = (e) => {
-    setData((prev) => ({...prev, [e.target.name]: e.target.value}));
+    setData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   return (
     <div className='time-of-event'>
@@ -28,43 +28,50 @@ const TimeOfEvent = ({setData, data}) => {
       </div> */}
       <div className='event-time-box'>
         <div>
-          <label htmlFor='event-starts'>Event Starts*
-          <input
-            type='date'
-            id='event-starts'
-            name='eventStarts'
-            onChange={changeHandler}
-            value={data?.eventStarts}
-          /></label>
-          <label htmlFor='start-time'>Start Time*
-          <input
-            type='time'
-            id='start-time'
-            name='startTime'
-            onChange={changeHandler}
-            value={data?.startTime}
-          /></label>
+          <label htmlFor='event-starts'>
+            Event Starts*
+            <input
+              type='date'
+              id='event-starts'
+              name='eventStarts'
+              onChange={changeHandler}
+              value={data?.eventStarts}
+            />
+          </label>
+          <label htmlFor='start-time'>
+            Start Time*
+            <input
+              type='time'
+              id='start-time'
+              name='startTime'
+              onChange={changeHandler}
+              value={data?.startTime}
+            />
+          </label>
         </div>
         <div>
-          <label htmlFor='event-ends'>Event Ends*
-          <input
-            type='date'
-            id='event-ends'
-            name='eventEnds'
-            onChange={changeHandler}
-            value={data?.eventEnds}
-          /></label>
-          <label htmlFor='end-time'>End time*
-          <input
-            type='time'
-            id='end-time'
-            name='endTime'
-            onChange={changeHandler}
-            value={data?.endTime}
-          /></label>
+          <label htmlFor='event-ends'>
+            Event Ends*
+            <input
+              type='date'
+              id='event-ends'
+              name='eventEnds'
+              onChange={changeHandler}
+              value={data?.eventEnds}
+            />
+          </label>
+          <label htmlFor='end-time'>
+            End time*
+            <input
+              type='time'
+              id='end-time'
+              name='endTime'
+              onChange={changeHandler}
+              value={data?.endTime}
+            />
+          </label>
         </div>
       </div>
-      {/*event start, end */}
     </div>
   );
 };

@@ -3,9 +3,6 @@ import React from 'react';
 /* Style */
 import './Styles/EventImage.css';
 
-/* Image */
-import eventImagePlaceholder from '../../others/logo/logo7.3.png';
-
 const EventImage = ({ eventInfo }) => {
   return (
     <>
@@ -19,11 +16,6 @@ const EventImage = ({ eventInfo }) => {
             />
           ) : (
             <p className='event-image-default'>Meetforce</p>
-            // <img
-            //   className='event-image-default'
-            //   src={eventImagePlaceholder}
-            //   alt={eventInfo?.title}
-            // />
           )}
         </div>
       )}

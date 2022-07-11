@@ -8,7 +8,6 @@
 
 .settings-form-container h1 {
   font-size: var(--h1-font-size);
-  /* letter-spacing: 0.3rem; */
 }
 
 .section-header {
@@ -98,7 +97,7 @@
 }
 
 .settings-date .input-date {
-  margin: auto -1.1rem auto 7.8rem;
+  margin: auto -1.1rem auto 6.8rem;
   width: 24.5rem;
   height: 6rem;
   border-radius: var(--form-input-border-radius);
@@ -122,7 +121,7 @@
 }
 
 .settings-gender .select-gender {
-  margin: 1rem -1.1rem 0 7.3rem;
+  margin: 1rem -1.1rem 0 7.45rem;
   width: 24.5rem;
   height: 6rem;
   border-radius: var(--form-input-border-radius);
@@ -142,7 +141,7 @@
 }
 
 .settings-introduction .textarea-introduction {
-  margin-left: 4.6rem;
+  margin-left: 4.8rem;
   width: 24.5rem;
   height: 15rem;
   border-radius: var(--form-input-border-radius);
@@ -185,6 +184,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.settings-image input {
+  margin: 1rem 1rem 0 2rem;
+  font-size: var(--form-label-font-size);
+  padding: var(--form-input-padding);
+  border-radius: var(--form-input-border-radius);
+  border: 1px solid var(--form-input-border-color);
+  width: 15.2rem;
+  height: 4.4rem;
 }
 
 .avatar-img {

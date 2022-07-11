@@ -6,10 +6,6 @@ import './Styles/EventCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarXmark, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
-/*Firebase*/
-import { storage } from '../../config/firebase';
-import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-
 /* CRUD */
 import { readData } from '../../services/crud';
 import { liveValue } from '../../services/crud';
@@ -24,7 +20,6 @@ const EventCard = ({
   unsubscribeModalHandler,
   deleteModalHandler,
 }) => {
-  const [userAvatarData, setUserAvatarData] = useState([]);
   const [attendeesNo, setAttendeesNo] = useState([]);
   const [attendeesNm, setAttendeesNm] = useState([]);
 
@@ -38,8 +33,6 @@ const EventCard = ({
       setAttendeesNm(Object.values(snapshot.val() || {}));
     });
   }, [eventId]);
-
-  //console.log(attendeesNb);
 
   return (
     <div

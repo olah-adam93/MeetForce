@@ -7,13 +7,6 @@ import InfoBox from '../others/InfoBox';
 import '../others/InfoBox.css';
 import './Style/ThankYouView.css';
 
-/* Fontawesome */
-import {
-  faMagnifyingGlass,
-  faCirclePlus,
-  faAddressCard,
-} from '@fortawesome/free-solid-svg-icons';
-
 /* Decoration */
 import thankyouSearch from '../others/decoration/thankyou-search.svg';
 import thankyouAdd from '../others/decoration/thankyou-add.svg';

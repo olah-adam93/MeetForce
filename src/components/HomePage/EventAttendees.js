@@ -12,8 +12,6 @@ import { readData } from '../../services/crud';
 const EventAttendees = () => {
   const eventDb = useContext(EventDbContext);
 
-  //https://firebasestorage.googleapis.com/v0/b/meet-force.appspot.com/o/userAvatar%2FHt1JUMLvGBSMp2oWyXZSxxzhE762?alt=media&token=050627c7-e5f3-46fa-a5c5-f4b5cd464e6e
-
   const [attendeesId, setAttendeesId] = useState([]);
   const [attendeesNb, setAttendeesNb] = useState([]);
   const [attendeesNm, setAttendeesNm] = useState([]);

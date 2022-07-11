@@ -12,7 +12,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 
-const NavBarMain = ({ navDrop, navDropOff, small }) => {
+const NavBarMain = ({ navDrop, navDropOff, small, narrow }) => {
   const authContext = useContext(AuthContext);
   const auth = getAuth();
   const pathname = useLocation();
@@ -25,12 +25,12 @@ const NavBarMain = ({ navDrop, navDropOff, small }) => {
   return (
     <>
       <div className={`main-navbar ${navDrop ? ' display-navbar-modal-container' : ''}`}>
-        <ul className='display-navbar-modal-content'>
+        <ul className={navDrop && 'display-navbar-modal-content full-width'}>
           <li>
             <NavLink to='/home'>Home</NavLink>
           </li>
           <li>
-            <NavLink to='/about'>About me</NavLink>
+            <NavLink to='/about'>About</NavLink>
           </li>
           <li>
             <NavLink to='/events'>Events</NavLink>
@@ -45,8 +45,7 @@ const NavBarMain = ({ navDrop, navDropOff, small }) => {
               </li>
             </>
           )}
-          {/*----------------------*/}
-          {Object.values(authContext.userLog)?.length && navDrop && (
+          {Object.values(authContext.userLog)?.length && navDrop ? (
             <>
               <li>
                 <NavLink to='/profile/chosenevents'>Events joined by Me</NavLink>
@@ -76,8 +75,7 @@ const NavBarMain = ({ navDrop, navDropOff, small }) => {
                 </NavLink>
               </li>
             </>
-          )}
-          {/*--------------------- */}
+          ) : null}
           {!navDrop &&
             (Object.values(authContext.userLog)?.length ? (
               <div
@@ -93,7 +91,11 @@ const NavBarMain = ({ navDrop, navDropOff, small }) => {
                   </NavLink>
                 </li>
                 {closeDrop && (
-                  <div className='main-navbar-dropdown-content'>
+                  <div
+                    className={`main-navbar-dropdown-content ${`${
+                      navDrop ? ' display-navbar-modal-container' : ''
+                    }`}`}
+                  >
                     <div className='main-navbar-inner-dropdown-content'>
                       <ul className='display-navbar-modal-content'>
                         <li>

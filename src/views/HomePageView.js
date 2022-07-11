@@ -11,13 +11,9 @@ const HomePageView = () => {
     <div>
       <PictureSlider />
       <PicturesDetails />
-      {/* <div className='separator'></div> */}
       <EventSlider
-        containerName={'Newest events'}
-        /* searchKey={'paymentType'}
-        searchValue={'free'} */
+        containerName={'Latest events'}
       />
-      {/* <div className='separator'></div> */}
       <div className='separator'></div>
       <EventSlider
         containerName={'Free events'}

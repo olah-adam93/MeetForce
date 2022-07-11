@@ -86,13 +86,13 @@ const ContactView = () => {
         <div className='contact-us'>
           <div className='contact-us-header'>
             <h3 className='contact-title'>Contact me!</h3>
-            <img src={new_mail} alt='contact us' className='new-mail-img' />
+            <img src={new_mail} alt='contact me' className='new-mail-img' />
           </div>
           <form onSubmit={submitContactHandler} className='contact-us-form'>
             <input
               type='text'
               name='contactName'
-              placeholder='Please give us a contact name'
+              placeholder='Please give a contact name'
               onChange={changeContactHandler}
               className={contactInfo.contactName ? null : required}
               value={contactInfo?.contactName}

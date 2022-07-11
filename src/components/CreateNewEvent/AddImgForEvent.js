@@ -14,10 +14,6 @@ const AddImageForEvent = ({ setData, data }) => {
       <div className='pic-box'>
         <input type='file' name='image' onChange={onFileChange} />
         {data?.image && <p>You already added: {data?.image.name}</p>}
-        {/*  <button type='button' name='upload' onClick={onUploadImage}>
-          Upload
-        </button>
-         */}
       </div>
     </div>
   );

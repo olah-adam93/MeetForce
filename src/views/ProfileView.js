@@ -5,9 +5,6 @@ import { faLocationDot, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import statistic_data from '../others/decoration/statistic_data.svg';
 /* Components */
 import { useContext, useEffect, useState } from 'react';
-import UserNavbar from '../components/Profile/UserNavbar';
-import EventContainer from '../components/HomePage/EventContainer';
-import GaleryContainer from '../components/Profile/GaleryContainer';
 import EventSlider from '../components/HomePage/EventSlider';
 
 /* Firebase */
@@ -24,17 +21,13 @@ import { EventDbContext } from '../components/EventDbContext/EventDbContext';
 const ProfileView = () => {
   const userData = useContext(AuthContext);
   const events = useContext(EventDbContext);
-  const [userDetails, setUserDetails] = useState({});
   const [filtered, setFiltered] = useState({});
   const [eventJoined, setEventJoined] = useState([]);
   const [eventsCard, setEventsCard] = useState([]);
+
   const auth = getAuth();
   const user = auth.currentUser;
-  /* useEffect(()=>{
-    readData('userDetails', user.uid)
-    .then(snapshot => setUserDetails(snapshot.val()))
-    console.log(userData.userLog.user.uid)
-  }, [user.uid userData.userLog.user]) */
+
   const eventsLength = events.db.length;
   useEffect(() => {
     const eventsUser = events.db.filter((item) => {
@@ -73,9 +66,6 @@ const ProfileView = () => {
   return (
     <div className='profile'>
       <div className='profile-head'>
-        {/* <div>
-          <UserNavbar />
-        </div> */}
         <div className='profile-head-avatar-container'>
           {/* <h1>Hi {userData.userLog.user.displayName}!</h1> */}
           <img

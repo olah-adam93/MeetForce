@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  /* height: 100%; */
   min-height: 100vh;
 }
 .create-new-event-container .new-event-form {
@@ -109,6 +108,10 @@
 }
 
 .create-new-event-container .new-event-form input {
+  width: 22rem;
+}
+
+.create-new-event-container .new-event-form .pic-box input {
   width: 15.2rem;
 }
 
@@ -121,19 +124,23 @@
   width: 4rem;
   height: 2rem;
 }
+
 .create-new-event-container .new-event-form input:hover,
 .new-event-form select:hover,
 .new-event-form textarea:hover {
   border: 1px solid var(--form-hover-input-border-color);
 }
+
 .create-new-event-container .new-event-form button {
   margin: 2rem 1rem;
 }
+
 .create-new-event-container .new-event-form .btn-container {
   /*  height: 5rem; */
   margin: 1rem 0;
   width: 50vw;
 }
+
 .create-new-event-container .new-event-form .basic-event-info .back-btn,
 .next-btn,
 .save-btn {
@@ -141,6 +148,7 @@
   margin: 0 1rem;
   float: right;
 }
+
 .create-new-event-container .new-event-form .basic-event-info .save-btn::after,
 .next-btn::after,
 .back-btn::after {
@@ -148,6 +156,7 @@
   clear: both;
   display: table;
 }
+
 .create-new-event-container .new-event-form button {
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
@@ -157,6 +166,7 @@
   font-weight: 500;
   transition: all 0.5s;
 }
+
 .create-new-event-container
   .new-event-form
   .new-event-payment-container
@@ -165,6 +175,7 @@
   display: inline;
   margin: 2rem 1rem;
 }
+
 .create-new-event-container .new-event-form .new-event-details textarea {
   width: 50vw;
   min-height: 30rem;
@@ -173,6 +184,7 @@
   box-shadow: var(--primary-box-shadow);
   resize: none;
 }
+
 .create-new-event-container
   .new-event-form
   .basic-event-info
@@ -181,6 +193,7 @@
   label {
   display: inline;
 }
+
 /*Map*/
 .map-box {
   min-width: 32rem;
@@ -190,18 +203,18 @@
   box-shadow: var(--primary-box-shadow);
   border-radius: var(--card-border-radius);
 }
+
 .hidden {
-  /* visibility: hidden; */
   display: none;
 }
+
 .visible {
-  /* visibility: visible; */
   display: block;
 }
+
 /*hover, focus*/
 .create-new-event-container .new-event-form button:hover {
   background-color: var(--button-hover-background-color);
-  /* transform: scale(1.2); */
   box-shadow: var(--hover-box-shadow);
 }
 
@@ -213,6 +226,7 @@
   align-items: center;
   min-height: 69rem;
 }
+
 .create-new-event-container
   .new-event-form
   .new-event-details
@@ -227,6 +241,7 @@
   padding: 5rem;
   background-color: var(--secondary-background-color);
 }
+
 .pic-box p {
   color: var(--fourthly-text-color);
 }
@@ -237,16 +252,16 @@
   align-items: center;
   flex-direction: column;
 }
+
 .new-event-payment-container {
   width: 50vw;
 }
+
 .create-new-event-container .new-event-form .new-event-payment-container {
   min-height: 69rem;
   min-width: 34rem;
-  /* display: flex;
-  align-items: center;
-  flex-direction: column; */
 }
+
 .create-new-event-container
   .new-event-form
   .new-event-payment-container
@@ -254,6 +269,7 @@
   margin-left: 3rem;
   margin-bottom: 4rem;
 }
+
 .ticket-details {
   background-color: var(--secondary-background-color);
   border-radius: var(--card-border-radius);
@@ -261,10 +277,12 @@
   padding: 3rem 1rem;
   width: fit-content;
 }
+
 .ticket-pricing-information,
 .ticket-validation {
   margin-bottom: 4rem;
 }
+
 .create-new-event-container .new-event-form .new-event-payment-container .ticket-details {
   margin: 1rem;
   min-height: 28rem;
@@ -280,11 +298,6 @@
   .time-of-event {
     width: 34rem;
   }
-
-  /*.add-image-event-container,
-  .new-event-description {
-    margin: auto;
-  }*/
 
   .create-new-event-container
     .new-event-form
@@ -307,7 +320,7 @@
   }
 
   .create-new-event-container .new-event-form input {
-    width: 15.2rem;
+    width: 22rem;
   }
 
   .create-new-event-container .new-event-form .btn-container {

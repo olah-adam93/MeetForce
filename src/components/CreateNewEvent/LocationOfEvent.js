@@ -5,7 +5,6 @@ import MapWrapped from './Map/MapWrapped';
 
 const LocationOfEvent = ({ setData, data, visible, setVisible }) => {
   const [map, setMap] = useState();
-  /* const [visible, setVisible] = useState(false) */
 
   const changeHandler = (e) => {
     if (e.target.value === 'online') {

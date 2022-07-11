@@ -21,9 +21,6 @@ const PictureSlider = () => {
         spaceBetween={0}
         loop={true}
         autoplay={{ delay: 6000, /* pauseOnMouseEnter: true */ }}
-        // pagination={{
-        //   clickable: true,
-        // }}
         navigation={false}
         className='swiper'
       >

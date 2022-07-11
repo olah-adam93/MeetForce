@@ -1,11 +1,6 @@
-import {database} from '../config/firebase';
-import {ref, set, push, get, update, remove} from 'firebase/database';
-import {onChildAdded, onChildChanged, onChildRemoved, onValue} from 'firebase/database';
-
-/*endpoint =>   ezt meghíváskor kell megadni
-key-t is
-dataObject - amit pl. a form-ból megadott useState-ben beállítottunk és meghíváskor megadjuk
-*/
+import { database } from '../config/firebase';
+import { ref, set, push, get, update, remove } from 'firebase/database';
+import { onChildAdded, onChildChanged, onChildRemoved, onValue } from 'firebase/database';
 
 /*CRUD*/
 
@@ -24,7 +19,6 @@ export function createUserData(endpoint, dataObject) {
 /*Read */
 export function readData(endpoint, key) {
   if (key) {
-    // Példa: endpoint: events/-MzpS80DW3ZJdzAs_Iwg
     const refData = ref(database, `${endpoint}/${key}`);
     return get(refData);
   }

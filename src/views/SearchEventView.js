@@ -13,7 +13,6 @@ import {EventDbContext} from '../components/EventDbContext/EventDbContext';
 
 /* Google Maps */
 import {Wrapper} from '@googlemaps/react-wrapper';
-import EventCard from '../components/HomePage/EventCard';
 
 const SearchEventView = () => {
   const eventDb = useContext(EventDbContext);
@@ -100,13 +99,6 @@ const SearchEventView = () => {
   }, [eventsCard, eventDb]);
 
   useEffect(() => {
-    // setEventsCard(
-    //   searchFunction(eventDb.db).sort((a, b) => {
-    //     return (
-    //       new Date(b[1].createdDate).getTime() - new Date(a[1].createdDate).getTime()
-    //     );
-    //   })
-    // );
 
     const result = searchFunction(eventDb.db).sort((a, b) => {
       return new Date(b[1].createdDate).getTime() - new Date(a[1].createdDate).getTime();

@@ -1,5 +1,3 @@
-/* work in progress */
-
 import './Styles/JoinModal.css';
 
 import { updateData } from '../../services/crud';
@@ -29,16 +27,12 @@ const JoinModal = ({ clickHandler, setIsOpen, eventKey, eventValue }) => {
     }).then(() => {
       setIsOpen(false);
     });
-    navigateTo("/join-success")
+    navigateTo('/join-success');
   };
-
-  // }).then(() => {
-  //   navigate("../join-success", { replace: true });
-  // });
 
   return (
     <div className='joinmodal-container'>
-      <div className="join-modal-box">
+      <div className='join-modal-box'>
         <div className='joinmodal-image-container'>
           <img
             className='joinmodal-image'
@@ -67,9 +61,8 @@ const JoinModal = ({ clickHandler, setIsOpen, eventKey, eventValue }) => {
               >
                 Close
               </button>
-              
-              {
-              user ? (
+
+              {user ? (
                 attendees.includes(user.uid) ? (
                   <span>Already joined!</span>
                 ) : attendees.length !== Number(eventValue?.attendant) ? (
@@ -88,7 +81,9 @@ const JoinModal = ({ clickHandler, setIsOpen, eventKey, eventValue }) => {
                   <span>This event is full!</span>
                 )
               ) : (
-                <button onClick={() => navigateTo('/signin')}>Sign in to subscribe</button>
+                <button onClick={() => navigateTo('/signin')}>
+                  Sign in to subscribe
+                </button>
               )}
             </div>
           </div>

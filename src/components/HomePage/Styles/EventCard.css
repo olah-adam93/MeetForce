@@ -190,14 +190,11 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Image ------------------------ */
-
 /* Data ------------------------ */
 .event-data-search {
   line-height: 1.5;
   padding-left: 2rem;
   flex-grow: 2;
-  /*min-height: 20rem;*/
   position: relative;
 }
 
@@ -222,7 +219,6 @@
 
 .event-data-attendees-search {
   text-align: right;
-  /* margin-left: 28rem; */
   transform: translateY(3rem);
   color: var(--tertiary-text-color);
 }
@@ -235,7 +231,6 @@
   font-weight: bold;
   color: var(--fourthly-text-color);
 }
-/* Data ------------------------ */
 
 .event-card-button button {
   position: absolute;

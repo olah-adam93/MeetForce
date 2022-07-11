@@ -82,7 +82,6 @@ const BasicInfoForm = ({ setData, data }) => {
           min='0'
         />
       </div>
-      {/* )} */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
 :root {
   --primary-background-color: #f3f4f5;
@@ -50,6 +50,7 @@
 
   --p-font-size-small: 1.4rem;
   --p-font-size: 1.6rem;
+  --p-font-size-large: 2rem;
 
   --form-label-font-size: 1.6rem;
   --form-input-padding: 1.2rem;

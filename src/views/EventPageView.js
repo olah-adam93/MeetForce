@@ -8,7 +8,6 @@ import { Wrapper } from '@googlemaps/react-wrapper';
 import EventDetails from '../components/HomePage/EventDetails';
 import EventImage from '../components/HomePage/EventImage';
 import EventInfo from '../components/HomePage/EventInfo';
-import JoinModal from '../components/HomePage/JoinModal';
 import EventInfoMap from '../components/HomePage/EventInfoMap';
 
 /* Style */
@@ -17,9 +16,6 @@ import './Style/EventPageView.css';
 /* Database Context */
 import { EventDbContext } from '../components/EventDbContext/EventDbContext';
 import NotFound from '../others/NotFound';
-
-/* CRUD */
-import { updateData } from '../services/crud';
 
 /* Firebase */
 import { auth } from '../config/firebase';
@@ -41,24 +37,6 @@ const EventPageView = () => {
     });
     setEventInfo(...filteredArray);
   }, [eventDb.db, eventId]);
-
-  // useEffect(() => { console.log(eventInfo)}, [eventInfo]);
-
-  /* useEffect(() => {
-    if (searchParams.get('success') && eventInfo?.[0] && user?.uid) {
-      updateData('eventAttendees', eventInfo[0], {[user.uid]: user.displayName}).then(
-        () => {
-          setIsOpen(false);
-          setPaymentSuccess(true);
-        }
-      );
-    }
-  }, [searchParams, eventInfo, user]); */
-
-  /*  const clickHandler = () => {
-    setIsOpen(!isOpen);
-    console.log(isOpen);
-  }; */
 
   return (
     <>

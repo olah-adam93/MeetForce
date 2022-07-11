@@ -15,7 +15,7 @@ function PaySuccess() {
   useEffect(() => {
     if (
       searchParams.get('success') === 'true' &&
-      searchParams.get('key') /*  eventInfo?.[0] */ &&
+      searchParams.get('key') &&
       user?.uid
     ) {
       updateData('eventAttendees', searchParams.get('key'), {

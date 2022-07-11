@@ -1,50 +1,45 @@
 .joinmodal-container {
   background-color: rgb(143, 141, 141, 0.9);
   position: absolute;
-  
-  /* margin:auto; */
-  /* height: 100vh; */
   width: 85%;
   display: flex;
   justify-content: center;
-  
+
   border-radius: 0.5rem;
 }
-.join-modal-box{
+.join-modal-box {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 70vh;
   width: 80vw;
-  
-
 }
 .joinmodal-image-container {
   padding-right: 1em;
   width: 35rem;
   height: auto;
-  
-  margin:auto;
+
+  margin: auto;
 }
 
 .joinmodal-image {
   padding-top: 20%;
   width: 35rem;
-  height: auto
+  height: auto;
 }
 
 .joinmodal-close-button {
   width: 5rem;
   position: relative;
   left: 10rem;
-  top: 2rem
+  top: 2rem;
 }
 
 .joinmodal-join-button {
   width: 5rem;
   position: relative;
   left: 15rem;
-  top: 2rem
+  top: 2rem;
 }
 
 .joinmodal-others-container {
@@ -53,26 +48,26 @@
 }
 
 .joinmodal-details-title {
-  padding-bottom: 3rem
+  padding-bottom: 3rem;
 }
 
 .joinmodal-details-place {
-  padding-bottom: 1.5rem
+  padding-bottom: 1.5rem;
 }
 
 .joinmodal-details-date {
-  padding-bottom: 1.5rem
+  padding-bottom: 1.5rem;
 }
 
 .joinmodal-details-attendees {
-  padding-bottom: 1.5rem
+  padding-bottom: 1.5rem;
 }
 
 .joinmodal-form {
   padding-top: 2rem;
-  padding-left: 5rem
+  padding-left: 5rem;
 }
 
 .joinmodal-form-input {
-  width: 80%
+  width: 80%;
 }

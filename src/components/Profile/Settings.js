@@ -53,7 +53,6 @@ const Settings = ({ setData, data }) => {
         })
           .then(() => {
             setNameChanged(true);
-            /* setChangeMessage('Nothing changed! Please enter a valid e-mail!'); */
             setNameChangeMessage(`Username changed to ${authInputValue.name}!`);
             setTimeout(() => {
               setNameChanged(false);
@@ -81,7 +80,6 @@ const Settings = ({ setData, data }) => {
         updateEmail(user, authInputValue?.email || userObj.email)
           .then(() => {
             setEmailChanged(true);
-            /* setChangeMessage('Nothing changed! Please enter a valid e-mail!'); */
             setEmailChangeMessage(`Email address changed to ${authInputValue.email}!`);
             setTimeout(() => {
               setEmailChanged(false);
@@ -293,7 +291,6 @@ const Settings = ({ setData, data }) => {
               id='personal'
               value={false}
               onChange={changeHandler}
-              //defaultChecked={userDetailsObj.organization === 'false'}
             />
             <label className='form-radio-label' htmlFor='personal'>
               Personal
@@ -307,7 +304,6 @@ const Settings = ({ setData, data }) => {
               id='organization'
               value={true}
               onChange={changeHandler}
-              //defaultChecked={userDetailsObj.organization === 'true'}
             />
             <label className='form-radio-label' htmlFor='organization'>
               Organization

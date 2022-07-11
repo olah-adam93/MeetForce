@@ -34,8 +34,6 @@ export default function EventSlider({ containerName, searchKey, searchValue }) {
       }
     });
 
-    // console.log('datearr: ', dateArray);
-
     const sortedByDateArr = dateArray.sort((a, b) => {
       return new Date(b[1].createdDate).getTime() - new Date(a[1].createdDate).getTime();
     });

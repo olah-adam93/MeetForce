@@ -3,12 +3,13 @@
   flex-direction: column;
   align-items: center;
   min-width: 32rem;
-  /*width: 100%;*/
 }
+
 .contact-container h2 {
   font-size: var(--h1-font-size);
   margin-bottom: 6rem;
 }
+
 .contact-details {
   display: flex;
   flex-direction: row;
@@ -50,9 +51,11 @@
   width: 6rem;
   padding-top: 2rem;
 }
+
 .contact-admin-paragraph p {
   padding: 0 2rem 2rem 2rem;
 }
+
 .admin-header {
   position: relative;
   z-index: 10;
@@ -60,10 +63,12 @@
   justify-content: center;
   margin: 9.5rem;
 }
+
 .admin-header .contact-title {
   z-index: 10;
   margin: -0.5rem 2rem;
 }
+
 .admin-icon {
   position: absolute;
   top: -3.5rem;
@@ -71,12 +76,11 @@
   width: 32rem;
   margin: 2rem;
 }
+
 .requiredInformation {
   border: 1px solid var(--main-navbar-text-color);
 }
-/* .contact-us{
 
-} */
 .contact-container .contact-details .contact-us-form {
   display: flex;
   flex-direction: column;
@@ -85,13 +89,13 @@
   background-color: var(--secondary-background-color);
   padding: 3rem;
   margin-bottom: 6rem;
-  /*margin-top: 2rem;*/
   border-radius: var(--card-border-radius);
   box-shadow: var(--primary-box-shadow);
   z-index: 10;
   min-width: 32rem;
   height: 60rem;
 }
+
 .contact-container .contact-details .contact-us-form input,
 .contact-us-form textarea,
 .contact-container .contact-details .contact-us-form select {
@@ -102,20 +106,24 @@
   margin-bottom: 2rem;
   width: 100%;
 }
+
 .contact-container .contact-details .contact-us-form > select {
   margin-bottom: 1rem;
   width: 100%;
 }
+
 .contact-container .contact-us-form textarea {
   height: 20rem;
 
   resize: none;
 }
+
 .contact-container .contact-details .contact-us-form input:hover,
 .contact-us-form select:hover,
 .contact-us-form textarea:hover {
   border: 1px solid var(--form-hover-input-border-color);
 }
+
 .contact-container .contact-details .contact-us-form button {
   color: var(--button-text-color);
   background-color: var(--button-background-color);
@@ -125,10 +133,12 @@
   margin: 2rem 3rem 0 3rem;
   transition: all 0.2s ease-out;
 }
+
 .contact-container .contact-details .contact-us-form button:hover {
   background-color: var(--button-hover-background-color);
   cursor: pointer;
 }
+
 .contact-us-header {
   position: relative;
   z-index: 10;
@@ -136,11 +146,13 @@
   justify-content: center;
   margin: 9.5rem;
 }
+
 .contact-us-header .contact-title {
   z-index: 10;
   margin: 0 2rem;
   padding: 0 5rem 0 0;
 }
+
 .new-mail-img {
   position: absolute;
   top: -17.5rem;
@@ -148,6 +160,7 @@
   width: 32rem;
   margin: 2rem;
 }
+
 /*Modal*/
 .contact-container .display-modal-container {
   position: fixed;
@@ -162,6 +175,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .contact-container .display-modal-content {
   z-index: 1000;
   border-radius: 1rem;
@@ -178,6 +192,7 @@
   padding: 1rem;
   text-align: center;
 }
+
 .contact-container .display-modal-content button {
   border: none;
   font-size: 1.6rem;
@@ -187,16 +202,16 @@
   color: var(--button-text-color);
   transition: all 0.2s ease-out;
 }
+
 .contact-container .display-modal-content button:hover {
   background-color: var(--button-hover-background-color);
   cursor: pointer;
 }
+
 .contact-container .display-modal-content button:nth-child(1) {
   margin-right: 2rem;
 }
-/* .close-btn{
-  
-} */
+
 .contact-container .display-modal-content h3 {
   font-size: var(--h3-font-size);
 }

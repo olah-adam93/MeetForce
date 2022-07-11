@@ -81,7 +81,6 @@
   color: var(--tertiary-text-color);
   border-radius: var(--form-input-border-radius);
   background-color: var(--secondary-background-color);
-  /* border: 1px solid var(--form-input-border-secondary-color); */
   box-shadow: var(--primary-box-shadow);
   font-size: 1.4rem;
   width: 18rem;
@@ -90,8 +89,6 @@
   margin-right: 2rem;
   transition: all 0.2s ease-out;
   outline: none;
-  /* Remove arrow */
-  /* appearance: none; */
 }
 
 .filter-bar-form select:last-child {
@@ -110,7 +107,6 @@
   border: 1px solid transparent;
   border-radius: var(--form-input-border-radius);
   background-color: var(--secondary-background-color);
-  /* border: 1px solid var(--form-input-border-secondary-color); */
   box-shadow: var(--primary-box-shadow);
   color: var(--tertiary-text-color);
   outline: none;

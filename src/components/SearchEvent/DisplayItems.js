@@ -195,21 +195,6 @@ const DisplayItems = ({
       <div className='pagination-container'>
         {filteredDbItems.length < itemsPerPage ? (
           null
-          // <>
-          //   <button type='button' onClick={toFirstPageHandler} disabled>
-          //     <FontAwesomeIcon icon={faAnglesLeft} />
-          //   </button>
-          //   <button type='button' onClick={previousButtonHandler} disabled>
-          //     <FontAwesomeIcon icon={faAngleLeft} />
-          //   </button>
-          //   <span>{` Page ${currentPage} of ${1} `}</span>
-          //   <button type='button' onClick={nextButtonHandler} disabled>
-          //     <FontAwesomeIcon icon={faAngleRight} />
-          //   </button>
-          //   <button type='button' onClick={toLastPageHandler} disabled>
-          //     <FontAwesomeIcon icon={faAnglesRight} />
-          //   </button>
-          // </>
         ) : (
           <>
             <button

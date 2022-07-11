@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 
-/*Firebase*/
-import { storage } from '../../config/firebase';
-import { getStorage, ref, getDownloadURL } from 'firebase/storage';
-
 /* CRUD */
 import { readData } from '../../services/crud';
 
@@ -34,10 +30,10 @@ const EventDetails = ({ eventInfo, eventId }) => {
   }, []);
 
   // Attendees number //
-  console.log(attendeesNb);
+  //console.log(attendeesNb);
 
   // Attendees name //
-  console.log(attendeesNm);
+  //console.log(attendeesNm);
 
   // Attendees AvatarList //
 

@@ -1,11 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-// import {Link} from 'react-router-dom';
 
 /* Style */
 import './Styles/EventInfoMap.css';
-
-/* Image */
-import eventImagePlaceholder from '../../others/logo/logo7.3.png';
 
 const EventInfoMap = ({ eventInfo }) => {
   const [map, setMap] = useState();
@@ -25,12 +21,9 @@ const EventInfoMap = ({ eventInfo }) => {
     if (map) {
       map.setOptions({
         zoom: 8,
-        // center: { lat: eventInfo[1]?.geoLat, lng: eventInfo[1]?.geoLng },
         center: { lat: Number(eventInfo?.geoLat), lng: Number(eventInfo?.geoLng) },
-        // disableDefaultUI: true,
         mapTypeControl: false,
         streetViewControl: false,
-        // gestureHandling: "greedy",
       });
     }
   }, [ref, map, eventInfo]);
@@ -40,7 +33,7 @@ const EventInfoMap = ({ eventInfo }) => {
       new window.google.maps.InfoWindow({
         content: `<div class='google-maps-event-infowindow-container'>
             <div class='google-maps-event-infowindow-img'><img src='${
-              eventInfo?.imageUrl ? eventInfo?.imageUrl : eventImagePlaceholder
+              eventInfo?.imageUrl ? eventInfo?.imageUrl : null /*eventImagePlaceholder*/
             }' alt=''></div>
             <div class='google-maps-event-infowindow-content-'>
               <div class='google-maps-event-infowindow-title'>${
@@ -61,19 +54,15 @@ const EventInfoMap = ({ eventInfo }) => {
 
   useEffect(() => {
     if (!marker && map) {
-      // console.log('current event:', currentEvent);
-
       const myMarker = new window.google.maps.Marker({
         position: { lat: Number(eventInfo?.geoLat), lng: Number(eventInfo?.geoLng) },
         map,
-        // optimized: true,
         animation: window.google.maps.Animation.DROP,
       });
 
       setMarker(myMarker);
 
       myMarker.addListener('click', (param) => {
-        // console.log('click on marker', param, event);
         infoWindow.open({
           anchor: myMarker,
           map,

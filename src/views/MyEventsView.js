@@ -8,7 +8,6 @@ import { EventDbContext } from '../components/EventDbContext/EventDbContext';
 
 /* AuthContext */
 import { getAuth } from '@firebase/auth';
-// import { AuthContext } from '../components/Authentication/AuthContext';
 
 const MyEventsView = () => {
   const eventDb = useContext(EventDbContext);

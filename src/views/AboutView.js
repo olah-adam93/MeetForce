@@ -13,24 +13,14 @@ const AboutView = () => {
         <img className='about-image-left-two' src={about2}></img>
       </div>
       <div className='about-text-container'>
-        <h1 className='about-title'>Who am i?</h1>
+        <h1 className='about-title'>What is Eventforce?</h1>
         <div className='about-body'>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex ante, suscipit
-            vitae lorem in, faucibus mollis lorem. Aliquam tellus dolor, gravida sed lacus
-            eget, egestas condimentum justo. Duis et commodo ex. Aliquam at leo in massa
-            venenatis rutrum quis vitae quam. Nulla facilisi.
-          </p>
-          <p>
-            Phasellus turpis tortor, condimentum tristique velit vel, vestibulum porta
-            nunc. Mauris posuere ex sit amet sapien malesuada volutpat. Duis vulputate
-            risus et maximus mollis. Nunc molestie orci lorem, eget lobortis felis pretium
-            quis.
-          </p>
-          <p>
-            Curabitur volutpat ullamcorper sapien. Morbi venenatis ante sapien, id
-            suscipit massa bibendum faucibus. In ligula dui, tincidunt ac eros vitae,
-            ultricies semper ligula.
+            Eventforce is a global self-service ticketing platform for live experiences
+            that allows anyone to create, share, find and attend events that fuel their
+            passions and enrich their lives. From Kung-Fu presentation, marathons,
+            conferences, community rallies, to gaming competitions and archery contest.
+            Our mission is to bring the world together through live experiences.
           </p>
         </div>
       </div>

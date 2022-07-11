@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   list-style: none;
-  /* parent element is a flex container so it will stick to the bottom of the page with margin-top: auto!*/
   margin-top: auto;
   background-color: var(--tertiary-background-color);
   box-shadow: var(--primary-box-shadow);

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus} from '@fortawesome/free-solid-svg-icons';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Authentication/AuthContext';
-import {getStorage, ref, uploadBytes, getDownloadURL, push} from 'firebase/storage';
+import { ref, uploadBytes, getDownloadURL} from 'firebase/storage';
 import {storage} from '../../config/firebase';
 const GaleryContainer = () => {
   const [galeryImg, setGaleryImg] = useState({});

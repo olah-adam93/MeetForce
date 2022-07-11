@@ -1,5 +1,4 @@
 import React, { useCallback, useContext, useState } from 'react';
-import Validation from './Validation';
 import { AuthContext } from '../Authentication/AuthContext';
 
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from 'firebase/auth';
@@ -55,7 +54,6 @@ const SignUp = ({ submitForm }) => {
         console.log('user', auth?.currentUser);
       })
       .then(() => {
-        /* const auth = getAuth(); */
         const user = auth.currentUser;
         if (user.uid) {
           updateProfile(user, {
@@ -109,9 +107,6 @@ const SignUp = ({ submitForm }) => {
     } else if (data.passw.length > 10) {
       errors.passw = 'Password cannot be more than 10 characters!';
     }
-    /*if (!data.loc) {
-      errors.loc = 'Location cannot be blank!';
-    }*/
     if (!data.organization) {
       errors.organization = 'Please choose from the given options!';
     }
@@ -121,11 +116,6 @@ const SignUp = ({ submitForm }) => {
   return (
     <div className='sign-up-container'>
       <form onSubmit={handleFormSubmit}>
-        {/* <img
-          className='header-logo-img'
-          src={require('../../others/logo/meetatsix100.406.szines2.png')}
-          alt='logo'
-        /> */}
         <div className='sign-up-header'>
           <h3> Sign Up </h3>
         </div>

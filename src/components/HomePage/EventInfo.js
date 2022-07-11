@@ -25,11 +25,6 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
   const [attendeesNm, setAttendeesNm] = useState([]);
   const navigateTo = useNavigate();
 
-  // useEffect(() => {
-  //   readData('eventAttendees', eventKey).then((snapshot) => {
-  //     setAttendees(Object.entries(snapshot.val() || {}));
-  //   });
-  // }, [eventKey]);
 
   useEffect(() => {
     readData('eventAttendees', eventKey).then((snapshot) => {
@@ -38,16 +33,11 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
     });
   }, []);
 
-  //console.log(attendeesNo);
-  //console.log(attendeesNm);
 
   const clickHandler = () => {
-    /* setIsOpen(!isOpen);
-    console.log(isOpen); */
     updateData('eventAttendees', eventKey, {
       [user.uid]: user.displayName,
     }).then(() => {
-      // setIsOpen(false);
     });
     navigateTo('/join-success');
   };
@@ -95,12 +85,6 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
       <div className='event-info-organizer' onClick={clickOrganizer}>
         Organizer: {eventValue?.organizer}
       </div>
-      {/* {organizerData && (
-        <div>
-        <p>Event organizer contact: {eventValue?.organizerEmail}</p>
-        <button onClick={clickOrganizer}>X</button>
-        </div>
-      )} */}
 
       <div className='event-info-attendees'>
         Attendees: {attendeesNm.length === 0 ? 0 : attendeesNm.length}

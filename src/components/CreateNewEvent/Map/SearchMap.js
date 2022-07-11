@@ -7,11 +7,8 @@ const SearchMap = ({setCenter, data, setData}) => {
 
   const onSearch = () => {
     geocoder
-      .geocode({address}) /*geocode(request[, callback])
-    Parameters: 
-      request:  GeocoderRequest
-      callback:  function(Array<GeocoderResult> optional, GeocoderStatus): void optional
-    Return Value:  Promise<GeocoderResponse>*/
+      .geocode({address})
+
       .then((result) => {
         const firstResult = result[0];
         const location = firstResult.geometry.location;

@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import {React } from 'react';
 import { useState, useContext } from 'react';
-//import Validation from './Validation';
 import { AuthContext } from '../Authentication/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -32,7 +31,6 @@ const SignIn = ({ submitForm }) => {
       ...data,
       [e.target.name]: e.target.value,
     });
-    //console.log(data);
     setError({});
   };
 
@@ -57,7 +55,6 @@ const SignIn = ({ submitForm }) => {
             break;
           default:
         }
-        //console.log(e.message);
       });
   };
 
@@ -85,11 +82,6 @@ const SignIn = ({ submitForm }) => {
   return (
     <div className='sign-in-container'>
       <form onSubmit={handleFormSubmit}>
-        {/* <img
-          className='header-logo-img'
-          src={require('../../others/logo/meetatsix100.406.szines2.png')}
-          alt='logo'
-        /> */}
         <div className='sign-in-header'>
           <h3> Log In </h3>
         </div>
