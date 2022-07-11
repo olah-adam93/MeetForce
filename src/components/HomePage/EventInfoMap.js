@@ -3,6 +3,9 @@ import { useState, useEffect, useRef } from 'react';
 /* Style */
 import './Styles/EventInfoMap.css';
 
+/* Image */
+import meetforce_logo from '../CreateNewEvent/Map/meetforce_logo.JPG';
+
 const EventInfoMap = ({ eventInfo }) => {
   const [map, setMap] = useState();
   const [marker, setMarker] = useState();
@@ -33,7 +36,7 @@ const EventInfoMap = ({ eventInfo }) => {
       new window.google.maps.InfoWindow({
         content: `<div class='google-maps-event-infowindow-container'>
             <div class='google-maps-event-infowindow-img'><img src='${
-              eventInfo?.imageUrl ? eventInfo?.imageUrl : null /*eventImagePlaceholder*/
+              eventInfo?.imageUrl ? eventInfo?.imageUrl : meetforce_logo
             }' alt=''></div>
             <div class='google-maps-event-infowindow-content-'>
               <div class='google-maps-event-infowindow-title'>${

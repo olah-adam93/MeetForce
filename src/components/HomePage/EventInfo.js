@@ -25,7 +25,6 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
   const [attendeesNm, setAttendeesNm] = useState([]);
   const navigateTo = useNavigate();
 
-
   useEffect(() => {
     readData('eventAttendees', eventKey).then((snapshot) => {
       setAttendeesNo(Object.keys(snapshot.val() || {}));
@@ -33,12 +32,10 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
     });
   }, []);
 
-
   const clickHandler = () => {
     updateData('eventAttendees', eventKey, {
       [user.uid]: user.displayName,
-    }).then(() => {
-    });
+    }).then(() => {});
     navigateTo('/join-success');
   };
 
@@ -87,7 +84,7 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
       </div>
 
       <div className='event-info-attendees'>
-        Attendees: {attendeesNm.length === 0 ? 0 : attendeesNm.length}
+        Attendees: {attendeesNo.length === 0 ? 0 : attendeesNo.length}
       </div>
 
       {user?.uid !== eventValue?.uid && (

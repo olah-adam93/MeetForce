@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import './Style/MapComponent.css';
 
 /* Image */
-/*import eventImagePlaceholder from '../../others/logo/logo7.3.png';*/
+import meetforce_logo from '../CreateNewEvent/Map/meetforce_logo.JPG';
 
 const MapComponent = ({ eventInfo }) => {
   const [map, setMap] = useState();
@@ -58,7 +58,7 @@ const MapComponent = ({ eventInfo }) => {
           content: `<div class='google-maps-infowindow-container'>
             <a class='google-maps-infowindow-link' href='/eventpage/${key}'>
             <div class='google-maps-infowindow-img'><img src='${
-              value?.imageUrl ? value?.imageUrl : null /*eventImagePlaceholder*/
+              value?.imageUrl ? value?.imageUrl : meetforce_logo
             }' alt=''></div>
             <div class='google-maps-infowindow-content-'>
               <div class='google-maps-infowindow-title'>${
