@@ -10,7 +10,7 @@ import StripePayment from './StripePayment';
 import { auth } from '../../config/firebase';
 
 /* CRUD */
-import { readData, updateData } from '../../services/crud';
+import { readData, updateData, liveChanged, liveValue } from '../../services/crud';
 
 /* Fontawesome */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -30,7 +30,7 @@ const EventInfo = ({ eventInfo, isOpen, setIsOpen, paymentSucces }) => {
       setAttendeesNo(Object.keys(snapshot.val() || {}));
       setAttendeesNm(Object.values(snapshot.val() || {}));
     });
-  }, []);
+  }, [eventKey]);
 
   const clickHandler = () => {
     updateData('eventAttendees', eventKey, {
