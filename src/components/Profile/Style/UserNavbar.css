@@ -17,7 +17,7 @@
 }
 .user-navbar li a:hover {
   transform: translateY(-0.3rem);
-  text-shadow: .2rem .2rem .8rem #49599b;
+  text-shadow: 0.2rem 0.2rem 0.8rem #49599b;
 }
 .user-navbar li a:active {
   transform: translateY(-0.1rem);

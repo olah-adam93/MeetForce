@@ -47,7 +47,6 @@
 .settings-email .label-form,
 .settings-location .label-form,
 .settings-date .label-form,
-.settings-telephoneNumber .label-form,
 .settings-gender .label-form,
 .settings-introduction .label-form {
   font-size: var(--form-label-font-size);
@@ -56,14 +55,21 @@
   margin-top: 2rem;
 }
 
+.settings-telephoneNumber .label-form {
+  font-size: var(--form-label-font-size);
+  margin-left: 0;
+  max-width: 8rem;
+  margin-top: 2rem;
+}
+
 .settings-introduction .label-form {
   font-size: var(--form-label-font-size);
   margin-top: 6rem;
 }
 
-.settings-location input,
 .settings-telephoneNumber input {
-  margin: 1rem -1.1rem 0 1rem;
+  position: relative;
+  left: 7.5%;
   width: 24.5rem;
   height: 6rem;
   border-radius: var(--form-input-border-radius);
@@ -75,7 +81,8 @@
 }
 
 .settings-name .input-name {
-  margin-left: 5.9rem;
+  position: relative;
+  left: 9%;
   width: 24.5rem;
   border-radius: var(--form-input-border-radius);
   border-color: var(--form-input-border-color);
@@ -86,7 +93,8 @@
 }
 
 .settings-email .input-email {
-  margin-left: 9.4rem;
+  position: relative;
+  left: 19.5%;
   width: 24.5rem;
   border-radius: var(--form-input-border-radius);
   border-color: var(--form-input-border-color);
@@ -97,7 +105,8 @@
 }
 
 .settings-date .input-date {
-  margin: auto -1.1rem auto 6.8rem;
+  position: relative;
+  left: 13%;
   width: 24.5rem;
   height: 6rem;
   border-radius: var(--form-input-border-radius);
@@ -109,7 +118,8 @@
 }
 
 .settings-location .input-location {
-  margin-left: 6.8rem;
+  position: relative;
+  left: 12.5%;
   width: 24.5rem;
   height: 6rem;
   border-radius: var(--form-input-border-radius);
@@ -121,7 +131,8 @@
 }
 
 .settings-gender .select-gender {
-  margin: 1rem -1.1rem 0 7.45rem;
+  position: relative;
+  left: 15%;
   width: 24.5rem;
   height: 6rem;
   border-radius: var(--form-input-border-radius);
@@ -141,7 +152,8 @@
 }
 
 .settings-introduction .textarea-introduction {
-  margin-left: 4.8rem;
+  position: relative;
+  left: 7%;
   width: 24.5rem;
   height: 15rem;
   border-radius: var(--form-input-border-radius);
