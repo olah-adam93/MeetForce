@@ -1,6 +1,6 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
-import {useState, useEffect} from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 /* Components */
 import ScrollToTop from './others/ScrollToTop';
@@ -33,15 +33,15 @@ import MainPageLayout from './layouts/MainPageLayout';
 import UserMainPageLayout from './layouts/UserMainPageLayout';
 
 /* Database Context */
-import {EventDbContext} from './components/EventDbContext/EventDbContext';
+import { EventDbContext } from './components/EventDbContext/EventDbContext';
 
 /* Authentication Context */
-import {AuthContext} from './components/Authentication/AuthContext';
-import {auth} from './config/firebase';
-import {onAuthStateChanged} from 'firebase/auth';
+import { AuthContext } from './components/Authentication/AuthContext';
+import { auth } from './config/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
 /* CRUD */
-import {liveValue} from './services/crud';
+import { liveValue } from './services/crud';
 
 function App() {
   const [db, setDb] = useState([]);
@@ -52,7 +52,7 @@ function App() {
       console.log('user belépve', user);
       if (user) {
         liveValue(`userDetails/${user.uid}`, (snapshot) => {
-          setUserLog((prev) => ({...prev, userDetails: snapshot.val(), user: user}));
+          setUserLog((prev) => ({ ...prev, userDetails: snapshot.val(), user: user }));
         });
       } else {
         setUserLog({});
@@ -69,11 +69,11 @@ function App() {
 
   return (
     <>
-      {userLog &&
+      {userLog && (
         <div className='App'>
           <ScrollToTop />
-          <AuthContext.Provider value={{userLog, setUserLog}}>
-            <EventDbContext.Provider value={{db, setDb}}>
+          <AuthContext.Provider value={{ userLog, setUserLog }}>
+            <EventDbContext.Provider value={{ db, setDb }}>
               <Routes>
                 <Route element={<MainPageLayout />}>
                   <Route path='*' element={<NotFound />} />
@@ -106,7 +106,7 @@ function App() {
             </EventDbContext.Provider>
           </AuthContext.Provider>
         </div>
-      }
+      )}
     </>
   );
 }

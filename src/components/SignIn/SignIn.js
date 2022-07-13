@@ -1,4 +1,4 @@
-import {React } from 'react';
+import { React } from 'react';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../Authentication/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

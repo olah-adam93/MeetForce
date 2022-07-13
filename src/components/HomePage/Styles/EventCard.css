@@ -258,11 +258,8 @@
   .event-picture-img-link-search {
     width: 22rem;
   }
-  .event-data-title-search {
-    font-size: 1.3rem;
-  }
+  .event-data-title-search,
   .event-data-search {
-    height: 24rem;
     font-size: 1.3rem;
   }
 }
