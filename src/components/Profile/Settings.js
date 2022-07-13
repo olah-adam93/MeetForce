@@ -310,7 +310,7 @@ const Settings = ({ setData, data }) => {
             </label>
           </div>
         </div>
-        <div className='edit-msg'>{orgChanged && 'Organization changed!'}</div>
+        <div className='edit-msg-org'>{orgChanged && 'Organization changed!'}</div>
         <button type='submit' className='save-button'>
           Save
         </button>

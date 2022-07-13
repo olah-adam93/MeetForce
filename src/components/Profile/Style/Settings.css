@@ -262,7 +262,8 @@
   font-weight: 500;
 }
 
-.edit-msg {
+.edit-msg,
+.edit-msg-org {
   margin: auto auto auto 45%;
   height: 1.5rem;
   font-size: var(--p-font-size-small);
@@ -287,5 +288,13 @@
 @media only screen and (max-width: 992px) {
   .settings-form-container .settings-form {
     width: 100%;
+  }
+
+  .edit-msg {
+    margin: auto auto auto 40%;
+  }
+
+  .edit-msg-org {
+    margin: auto auto auto 35%;
   }
 }

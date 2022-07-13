@@ -5,6 +5,8 @@ import { createNewData } from '../services/crud';
 import new_mail from '../others/decoration/new_mail.svg';
 import admin from '../others/decoration/admin.svg';
 import maleAvatar from '../others/decoration/male_avatar.svg';
+import femaleAvatar from '../others/decoration/female_avatar.svg';
+
 const ContactView = () => {
   const [contactInfo, setContactInfo] = useState({
     contactName: '',
@@ -78,6 +80,14 @@ const ContactView = () => {
                 <img src={maleAvatar} className='avatar-icon' />
                 <p>
                   Adam Olah <br /> Email: admin@admin.com
+                </p>
+              </div>
+              <div>
+                <img src={femaleAvatar} className='avatar-icon' />
+                <p>
+                  Visitor <br /> Email: visitor@visitor.com
+                  <br />
+                  Pssw: visitor01
                 </p>
               </div>
             </div>

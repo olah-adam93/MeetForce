@@ -38,6 +38,8 @@ const EventDetails = ({ eventInfo, eventId }) => {
   // Attendees AvatarList //
 
   const userAvatar = {
+    Visitor:
+      'https://firebasestorage.googleapis.com/v0/b/meet-force.appspot.com/o/userAvatar%2FDuzMVshIQsZ661KLBCU2ViA2ZWo2?alt=media&token=c5b8a025-8f0a-4791-8153-7a59338d1f2b',
     'Tracie Chicoine':
       'https://firebasestorage.googleapis.com/v0/b/meet-force.appspot.com/o/userAvatar%2FMbjV9nHNq7guYSWADlRJzCQPUxe2?alt=media&token=f0c00be4-a8b6-46c1-8946-149ddcdf146f',
     'Annmarie Linek':
