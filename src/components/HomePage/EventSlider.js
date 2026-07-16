@@ -1,20 +1,21 @@
 /* Style */
-import './Styles/EventSlider.css';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "./Styles/EventSlider.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext } from "react";
 
 /* Database Context */
-import { EventDbContext } from '../EventDbContext/EventDbContext';
+import { EventDbContext } from "../EventDbContext/EventDbContext";
 
 /* Components */
-import EventCard from './EventCard';
+import EventCard from "./EventCard";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, EffectCoverflow } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, EffectCoverflow } from "swiper";
 
 export default function EventSlider({ containerName, searchKey, searchValue }) {
   const eventDb = useContext(EventDbContext);
@@ -35,7 +36,10 @@ export default function EventSlider({ containerName, searchKey, searchValue }) {
     });
 
     const sortedByDateArr = dateArray.sort((a, b) => {
-      return new Date(b[1].createdDate).getTime() - new Date(a[1].createdDate).getTime();
+      return (
+        new Date(b[1].createdDate).getTime() -
+        new Date(a[1].createdDate).getTime()
+      );
     });
 
     setEventsCard(sortedByDateArr);
@@ -43,20 +47,22 @@ export default function EventSlider({ containerName, searchKey, searchValue }) {
 
   return (
     <>
-      <div className='event-slider-container'>
-        <h2 className='slider-container-name'>{containerName}</h2>
+      <div className="event-slider-container">
+        <h2 className="slider-container-name">{containerName}</h2>
         <Swiper
           slidesPerView={3}
           loop={false}
-          effect='coverflow'
+          effect="coverflow"
           navigation={true}
+          preventClicks={false}
+          preventClicksPropagation={false}
           pagination={{
             clickable: true,
             dynamicBullets: true,
             dynamicMainBullets: 6,
           }}
           modules={[Pagination, Navigation, EffectCoverflow]}
-          className='swiper'
+          className="swiper"
         >
           {eventsCard.map((event) => {
             return (

@@ -42,6 +42,10 @@
   height: 100%;
 }
 
+.event-slider-container .swiper-wrapper {
+  pointer-events: none;
+}
+
 .event-slider-container .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,6 +59,11 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+.event-slider-container .event-card-container,
+.event-slider-container .event-card-inner-container {
+  pointer-events: auto;
 }
 
 .swiper-pagination-bullet-active {
