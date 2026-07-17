@@ -14,11 +14,7 @@ const EventInfoMap = ({ eventInfo }) => {
 
   useEffect(() => {
     if (ref.current && !map) {
-      setMap(
-        new window.google.maps.Map(ref.current, {
-          mapId: 'f351ed5064543873',
-        })
-      );
+      setMap(new window.google.maps.Map(ref.current, {}));
     }
 
     if (map) {

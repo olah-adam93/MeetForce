@@ -101,33 +101,26 @@ const EventDetails = ({ eventInfo, eventId }) => {
           </div>
 
           {attendeesNm &&
-            attendeesNm.map((key) => {
-              console.log(key);
-              if (Object.keys(userAvatar).includes(key)) {
-                while (
-                  key === attendeesNm[0] ||
-                  key === attendeesNm[1] ||
-                  key === attendeesNm[2] ||
-                  key === attendeesNm[3] ||
-                  key === attendeesNm[4]
-                ) {
-                  return (
-                    <>
-                      <img
-                        className='event-details-useravatar'
-                        onMouseEnter={MouseEnterHandler}
-                        onMouseLeave={MouseLeaveHandler}
-                        name={key}
-                        src={
-                          userAvatar[key]
-                            ? userAvatar[key]
-                            : 'https://firebasestorage.googleapis.com/v0/b/meet-force.appspot.com/o/userAvatar%2F6tSUU7lLnkPHhdDCGLKGT3YSSs13?alt=media&token=661f41be-46d8-4355-b6f1-c1fd72b530a8'
-                        }
-                      ></img>
-                    </>
-                  );
-                }
+            attendeesNm.slice(0, 5).map((key) => {
+              if (!Object.keys(userAvatar).includes(key)) {
+                return null;
               }
+
+              return (
+                <img
+                  key={key}
+                  alt={key}
+                  className='event-details-useravatar'
+                  onMouseEnter={MouseEnterHandler}
+                  onMouseLeave={MouseLeaveHandler}
+                  name={key}
+                  src={
+                    userAvatar[key]
+                      ? userAvatar[key]
+                      : 'https://firebasestorage.googleapis.com/v0/b/meet-force.appspot.com/o/userAvatar%2F6tSUU7lLnkPHhdDCGLKGT3YSSs13?alt=media&token=661f41be-46d8-4355-b6f1-c1fd72b530a8'
+                  }
+                />
+              );
             })}
           {attendeesNm[4] ? <span>...</span> : null}
         </div>

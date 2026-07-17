@@ -13,6 +13,7 @@ import {EventDbContext} from '../components/EventDbContext/EventDbContext';
 
 /* Google Maps */
 import {Wrapper} from '@googlemaps/react-wrapper';
+import {googleMapsApiKey, renderGoogleMapsStatus} from '../config/googleMaps';
 
 const SearchEventView = () => {
   const eventDb = useContext(EventDbContext);
@@ -117,7 +118,7 @@ const SearchEventView = () => {
 
       <div className='search-event-inner-container'>
         <div className='display-maps-container'>
-          <Wrapper apiKey={'AIzaSyD9MpMtp9BcSlZgMy26wtaaamLbfOQhu8s'}>
+          <Wrapper apiKey={googleMapsApiKey} render={renderGoogleMapsStatus}>
             <MapComponent eventInfo={eventsCard} />
           </Wrapper>
         </div>

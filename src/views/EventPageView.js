@@ -3,6 +3,7 @@ import { useParams, useSearchParams } from 'react-router-dom';
 
 /* Googe Maps */
 import { Wrapper } from '@googlemaps/react-wrapper';
+import { googleMapsApiKey, renderGoogleMapsStatus } from '../config/googleMaps';
 
 /* Components */
 import EventDetails from '../components/HomePage/EventDetails';
@@ -69,7 +70,7 @@ const EventPageView = () => {
               </div>
 
               {eventInfo[1]?.locationType === 'venue' && (
-                <Wrapper apiKey={'AIzaSyD9MpMtp9BcSlZgMy26wtaaamLbfOQhu8s'}>
+                <Wrapper apiKey={googleMapsApiKey} render={renderGoogleMapsStatus}>
                   <EventInfoMap eventInfo={eventInfo[1]} />
                 </Wrapper>
               )}
